@@ -1,0 +1,45 @@
+<div>
+    <div id="pattern" class="row"> </div>
+</div>
+
+
+
+{{define "script"}}
+    <script>
+        $(function () {
+
+            AJS.dim();
+
+            setTimeout(function () {
+
+            },2000)
+
+            $('#header').html(com.poovarasan.application.appHeader({
+                isLoggedIn: false
+            }));
+
+            var sr = com.poovarasan.application.boxPattern({
+                image: "/static/image/sr.jpg",
+                heading: "Service Request",
+                description: "This is a sprint. Plan a sprint by dragging the sprint footer down below some issues, or by dragging issues here",
+
+            });
+            var pt = com.poovarasan.application.boxPattern({
+                image: "/static/image/pt.png",
+                heading: "Problem Ticket",
+                description: "This is a sprint. Plan a sprint by dragging the sprint footer down below some issues, or by dragging issues here",
+
+            });
+
+            var cr = com.poovarasan.application.boxPattern({
+                image: "/static/image/cr.jpg",
+                heading: "Change Request",
+                description: "This is a sprint. Plan a sprint by dragging the sprint footer down below some issues, or by dragging issues here",
+
+            });
+            $('#pattern').html(sr + pt + cr)
+
+            AJS.undim()
+        })
+    </script>
+{{end}}

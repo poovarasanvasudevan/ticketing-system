@@ -1,0 +1,138 @@
+{namespace com.poovarasan.application}
+
+/**
+ * normal fullPageContent
+ */
+{template .page}
+
+    {@param? header: string}
+
+    {call aui.page.document}
+        {param windowTitle: '' /}
+        {param headContent}
+            <link rel="stylesheet" href="/static/css/aui.min.css" />
+            <link rel="stylesheet" href="/static/css/aui-experimental.css" />
+            <link rel="stylesheet" href="/static/css/aui-iconfonts.min.css" />
+        {/param}
+        {param content}
+            {call aui.page.page}
+                {param headerContent}
+                    {$header}
+                {/param}
+                {param contentContent}
+                    <!-- call aui.page.pagePanel here -->
+                {/param}
+                {param footerContent}
+                    <!-- literal content here -->
+                {/param}
+            {/call}
+
+
+            <script src="/static/js/jq.js"></script>
+            <script src="/static/js/aui.min.js"></script>
+            <script src="/static/js/aui-datepicker.min.js"></script>
+            <script src="/static/js/aui-soy.min.js"></script>
+            <script src="/static/js/soyutils.js"></script>
+            <script src="/static/js/soy.js"></script>
+
+        {/param}
+    {/call}
+{/template}
+
+
+/**
+ * box Pattern
+ */
+{template .boxPattern}
+     {@param? image: string}
+     {@param? heading: string}
+     {@param? description: string}
+     {@param? secondaryDescription: string}
+
+
+    <div class="col-4 card">
+        <div class="col-3">
+            <img class="img-responsive" src="{$image}">
+        </div>
+        <div class="col-9">
+            <h2>{$heading}</h2>
+            <p>{$description}</p>
+             {if $secondaryDescription}
+                {$secondaryDescription|noAutoescape}
+             {/if}
+        </div>
+    </div>
+{/template}
+
+
+/**
+ * box Pattern
+ */
+{template .cboxPattern}
+     {@param? image: string}
+     {@param? heading: string}
+     {@param? description: string}
+     {@param? secondaryDescription: string}
+
+    <div class="aui-help aui-help-empty-state">
+
+        <div class="aui-help-illustration">
+            <img height="128" width="128" src="{$image}" />
+        </div>
+        <div class="aui-help-content">
+            <h6>{$heading}</h6>
+            <p>{$description}</p>
+
+            {if $secondaryDescription}
+                {$secondaryDescription|noAutoescape}
+            {/if}
+        </div>
+    </div>
+{/template}
+
+/**
+ * normal baseheader
+ */
+{template .normalHeader}
+    {call aui.page.header}
+        {param logo: 'jira' /}
+        {param headerLink: '#' /}
+    {/call}
+{/template}
+
+/**
+ * normal loggedinUserHeader
+ */
+{template .appHeader}
+
+    {@param? isLoggedIn: bool}
+
+
+    {call aui.page.header}
+      {param logo: 'bamboo' /}
+      {param headerLink: '#' /}
+      {param primaryNavContent}
+        <ul class="aui-nav">
+        </ul>
+      {/param}
+      {param secondaryNavContent}
+        <ul class="aui-nav">
+          <li>
+            <form class="aui-quicksearch" method="post" action="/foo">
+                <label class="assistive" for="quicksearchid">Search</label>
+                <input type="search" name="quicksearchname" placeholder="Quick Search" class="search" id="quicksearchid">
+            </form>
+          </li>
+
+          {if $isLoggedIn}
+            <h1>loggedom</h1>
+          {else}
+             <li><a href="https://example.com/"
+                    class="aui-button aui-button-primary">Sign In</a></li>
+             <li><a href="https://example.com/"
+                    class="aui-button">Register</a></li>
+          {/if}
+        </ul>
+      {/param}
+    {/call}
+{/template}

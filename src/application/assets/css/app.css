@@ -1,0 +1,22 @@
+.card {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.card:hover {
+    cursor: pointer;
+    background: #fafafa;
+}
+
+.card:active {
+    cursor: pointer;
+    background: #dddddd;
+}
+
+
+.img-responsive {
+    max-width: 100%;
+    height: auto
+}
