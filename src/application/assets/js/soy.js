@@ -67,7 +67,7 @@ com.poovarasan.application.appHeader = function(opt_data, opt_ignored) {
   opt_data = opt_data || {};
   goog.asserts.assert(opt_data.isLoggedIn == null || goog.isBoolean(opt_data.isLoggedIn), "expected param 'isLoggedIn' of type boolean|null|undefined.");
   var isLoggedIn = /** @type {boolean|null|undefined} */ (opt_data.isLoggedIn);
-  return '' + aui.page.header({logo: 'bamboo', headerLink: '#', primaryNavContent: '<ul class="aui-nav"></ul>', secondaryNavContent: '<ul class="aui-nav"><li><form class="aui-quicksearch" method="post" action="/foo"><label class="assistive" for="quicksearchid">Search</label><input type="search" name="quicksearchname" placeholder="Quick Search" class="search" id="quicksearchid"></form></li>' + ((isLoggedIn) ? '<h1>loggedom</h1>' : '<li><a href="https://example.com/" class="aui-button aui-button-primary">Sign In</a></li><li><a href="https://example.com/" class="aui-button">Register</a></li>') + '</ul>'});
+  return '' + aui.page.header({logo: 'bamboo', headerLink: '#', primaryNavContent: '<ul class="aui-nav"></ul>', secondaryNavContent: '<ul class="aui-nav"><li><form class="aui-quicksearch" method="post" action="/foo"><label class="assistive" for="quicksearchid">Search</label><input type="search" name="quicksearchname" placeholder="Quick Search" class="search search-input" id="quicksearchid"></form></li>' + ((isLoggedIn) ? '<h1>loggedom</h1>' : '<li><a href="https://example.com/" class="aui-button aui-button-primary">Sign In</a></li><li><a href="https://example.com/" class="aui-button aui-button-primary">Register</a></li>') + '</ul>'});
 };
 if (goog.DEBUG) {
   com.poovarasan.application.appHeader.soyTemplateName = 'com.poovarasan.application.appHeader';

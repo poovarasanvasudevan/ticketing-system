@@ -1,12 +1,12 @@
-/*!!
+/*!
  * @atlassian/aui - Atlassian User Interface Framework
- * @version v7.9.9
+ * @version v6.1.3
  * @link https://docs.atlassian.com/aui/latest/
- * @license SEE LICENSE IN LICENSE.md
- * @author Atlassian Pty Ltd.
+ * @license Apache-2.0
+ * @author [object Object]
  */
-// src/js/aui/header-async.js
-(typeof window === 'undefined' ? global : window).__4ce6348b01d75d9a324f6144c0ea40a3 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/header-async.js
+(typeof window === 'undefined' ? global : window).__fa554824603df089875ffc2c324bafcd = (function () {
   var module = {
     exports: {}
   };
@@ -18,11 +18,11 @@
       value: true
   });
   
-  var _createHeader = __455206c30630fecc55c648cca374a3ea;
+  var _createHeader = __75cae523f4ec02598abff52e61f818c0;
   
   var _createHeader2 = _interopRequireDefault(_createHeader);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
@@ -40,8 +40,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui-header-async.js
-(typeof window === 'undefined' ? global : window).__7b20a40206e7dce735ff9abf19002b4b = (function () {
+// node_modules/@atlassian/aui/src/js/aui-header-async.js
+(typeof window === 'undefined' ? global : window).__9015c868674613fba7973b8b3bdffd75 = (function () {
   var module = {
     exports: {}
   };
@@ -53,9 +53,33 @@
     value: true
   });
   
-  __4ce6348b01d75d9a324f6144c0ea40a3;
+  __fa554824603df089875ffc2c324bafcd;
   
   exports.default = window.AJS;
+  module.exports = exports['default'];
+  
+  return module.exports;
+}).call(this);
+// src/js/aui-header-async.js
+(typeof window === 'undefined' ? global : window).__53eb979d297c47fb8ee8c30347a4dd26 = (function () {
+  var module = {
+    exports: {}
+  };
+  var exports = module.exports;
+  
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _auiHeaderAsync = __9015c868674613fba7973b8b3bdffd75;
+  
+  var _auiHeaderAsync2 = _interopRequireDefault(_auiHeaderAsync);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = _auiHeaderAsync2.default;
   module.exports = exports['default'];
   
   return module.exports;

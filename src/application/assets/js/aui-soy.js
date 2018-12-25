@@ -1,12 +1,12 @@
-/*!!
+/*!
  * @atlassian/aui - Atlassian User Interface Framework
- * @version v7.9.9
+ * @version v6.1.3
  * @link https://docs.atlassian.com/aui/latest/
- * @license SEE LICENSE IN LICENSE.md
- * @author Atlassian Pty Ltd.
+ * @license Apache-2.0
+ * @author [object Object]
  */
-// .tmp/compiled-soy/atlassian-deps.js
-(typeof window === 'undefined' ? global : window).__54e4b8b90296f4ddc548db76b0b9d781 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/atlassian-deps.js
+(typeof window === 'undefined' ? global : window).__7370d4d8dc016de7133a750a6ba08425 = (function () {
   var module = {
     exports: {}
   };
@@ -31,8 +31,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/soyutils.js
-(typeof window === 'undefined' ? global : window).__2d33db0d9631310e0d91e7f30da8912f = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/soyutils.js
+(typeof window === 'undefined' ? global : window).__b4fccc98d9f9288402063b660507e61a = (function () {
   var module = {
     exports: {}
   };
@@ -5796,8 +5796,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/aui.js
-(typeof window === 'undefined' ? global : window).__6e08265924ed824cb6d9b5014235ea1b = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/aui.js
+(typeof window === 'undefined' ? global : window).__cc63fcd8c036f4dbee0e6ad07538ba93 = (function () {
   var module = {
     exports: {}
   };
@@ -5862,8 +5862,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/avatar.js
-(typeof window === 'undefined' ? global : window).__4964959e6f5920a9f882c5170b39a77f = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/avatar.js
+(typeof window === 'undefined' ? global : window).__ff1828d96f4a55f33636289f9fb5066c = (function () {
   var module = {
     exports: {}
   };
@@ -5893,8 +5893,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/badges.js
-(typeof window === 'undefined' ? global : window).__51104c16164551274f9305cc6f86afbe = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/badges.js
+(typeof window === 'undefined' ? global : window).__912f37764c1b10b92dca9b9b0698bbc0 = (function () {
   var module = {
     exports: {}
   };
@@ -5914,7 +5914,7 @@
   
   
   aui.badges.badge = function(opt_data, opt_ignored) {
-    return '<aui-badge' + ((opt_data.id) ? ' id="' + soy.$$escapeHtml(opt_data.id) + '"' : '') + ' class="' + aui.renderExtraClasses(opt_data) + '"' + aui.renderExtraAttributes(opt_data) + '>' + soy.$$escapeHtml(opt_data.text) + '</aui-badge>';
+    return '<' + soy.$$escapeHtml(opt_data.tagName ? opt_data.tagName : 'span') + ((opt_data.id) ? ' id="' + soy.$$escapeHtml(opt_data.id) + '"' : '') + ' class="aui-badge' + aui.renderExtraClasses(opt_data) + '"' + aui.renderExtraAttributes(opt_data) + '>' + soy.$$escapeHtml(opt_data.text) + '</' + soy.$$escapeHtml(opt_data.tagName ? opt_data.tagName : 'span') + '>';
   };
   if (goog.DEBUG) {
     aui.badges.badge.soyTemplateName = 'aui.badges.badge';
@@ -5924,8 +5924,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/buttons.js
-(typeof window === 'undefined' ? global : window).__bfd9a46468d0dad66fc42c14e79cae33 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/buttons.js
+(typeof window === 'undefined' ? global : window).__d345217ece82b68ea78eaba111938358 = (function () {
   var module = {
     exports: {}
   };
@@ -6014,8 +6014,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/dialog2.js
-(typeof window === 'undefined' ? global : window).__bf86e4e2d5202cab2a3cea56542f8437 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/dialog2.js
+(typeof window === 'undefined' ? global : window).__07d991b7c9dfab7cd21e0876145c4b59 = (function () {
   var module = {
     exports: {}
   };
@@ -6090,8 +6090,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/dropdown.js
-(typeof window === 'undefined' ? global : window).__4dc12184e325ee050ace2486d6f60785 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/dropdown.js
+(typeof window === 'undefined' ? global : window).__cfdee922eb92c9266d710b242cf90018 = (function () {
   var module = {
     exports: {}
   };
@@ -6146,8 +6146,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/dropdown2.js
-(typeof window === 'undefined' ? global : window).__470170a9dcfcab10e601200b6c6151be = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/dropdown2.js
+(typeof window === 'undefined' ? global : window).__64ff6df84080619cea4cc7d3f83ce124 = (function () {
   var module = {
     exports: {}
   };
@@ -6261,8 +6261,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/expander.js
-(typeof window === 'undefined' ? global : window).__4dc9c3675c6f1ec0c8b85aa224729cb9 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/expander.js
+(typeof window === 'undefined' ? global : window).__fb5ae7b6c33ecf744c5e3d7fd597aaf6 = (function () {
   var module = {
     exports: {}
   };
@@ -6308,8 +6308,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/form.js
-(typeof window === 'undefined' ? global : window).__eaf55c4df70d1b8c050443729afe6410 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/form.js
+(typeof window === 'undefined' ? global : window).__ddab5c27d571a2838fab1335148f42c0 = (function () {
   var module = {
     exports: {}
   };
@@ -6720,8 +6720,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/group.js
-(typeof window === 'undefined' ? global : window).__884ed61f9daa05df2031281b2f8861b8 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/group.js
+(typeof window === 'undefined' ? global : window).__9bb7ee6f367f17ef2ea7488e5e44bd19 = (function () {
   var module = {
     exports: {}
   };
@@ -6759,8 +6759,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/icons.js
-(typeof window === 'undefined' ? global : window).__c72f1c65cfadb3bff1995449a4770b6f = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/icons.js
+(typeof window === 'undefined' ? global : window).__b1777d91fdd3ca3b0840826b0320bf4d = (function () {
   var module = {
     exports: {}
   };
@@ -6790,8 +6790,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/inline-dialog2.js
-(typeof window === 'undefined' ? global : window).__261e4deda17455c5ed7104b43c461cd4 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/inline-dialog2.js
+(typeof window === 'undefined' ? global : window).__888c6d0c6a1b9b832d5a662c16e9cdd4 = (function () {
   var module = {
     exports: {}
   };
@@ -6829,8 +6829,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/labels.js
-(typeof window === 'undefined' ? global : window).__41fe3e31ae1711597b75c1366bbe2865 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/labels.js
+(typeof window === 'undefined' ? global : window).__7a8ab8fdc4dc4ed95a9b0e83fb8e6fa5 = (function () {
   var module = {
     exports: {}
   };
@@ -6876,8 +6876,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/lozenges.js
-(typeof window === 'undefined' ? global : window).__ff4c2d538902d7c121bf21e82c56b4ff = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/lozenges.js
+(typeof window === 'undefined' ? global : window).__0f4608fbf316399c114bfe6cbe30f441 = (function () {
   var module = {
     exports: {}
   };
@@ -6907,8 +6907,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/message.js
-(typeof window === 'undefined' ? global : window).__7e6543b7407f2ac9bde46137a1fac7da = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/message.js
+(typeof window === 'undefined' ? global : window).__3da081d6eaa76745c95664a9b959e5a9 = (function () {
   var module = {
     exports: {}
   };
@@ -6990,8 +6990,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/navigation.js
-(typeof window === 'undefined' ? global : window).__e0daffd184f5254ed34a416b45d3a5de = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/navigation.js
+(typeof window === 'undefined' ? global : window).__21924d82b6437e81624bc6b5fb12ac8a = (function () {
   var module = {
     exports: {}
   };
@@ -7011,7 +7011,7 @@
   
   
   aui.navigation.item = function(opt_data, opt_ignored) {
-    return '<li class="' + ((opt_data.isSelected || opt_data.key && opt_data.selectedItemKey == opt_data.key) ? 'aui-nav-selected' : '') + aui.renderExtraClasses(opt_data) + '"' + ((opt_data.isCollapsible && opt_data.children && opt_data.children.length > 0) ? 'aria-expanded="' + ((opt_data.isCollapsed) ? 'false' : 'true') + '"' : '') + aui.renderExtraAttributes(opt_data) + '>' + ((opt_data.children && opt_data.children.length > 0 && opt_data.isCollapsible) ? '<a href="#" class="aui-nav-subtree-toggle">' + aui.icons.icon({icon: opt_data.isCollapsed ? 'collapsed' : 'expanded', size: 'small', useIconFont: true}) + '</a>' : '') + '<a class="aui-nav-item" href="' + soy.$$escapeHtml(opt_data.href) + '">' + ((opt_data.iconClass && ! opt_data.isChild) ? aui.icons.icon({icon: opt_data.iconClass, size: 'small', useIconFont: true}) : '') + ((opt_data.count == 0 || opt_data.count) ? '<aui-badge>' + soy.$$escapeHtml(opt_data.count) + '</aui-badge>' : '') + '<span class="aui-nav-item-label">' + soy.$$escapeHtml(opt_data.label) + '</span></a>' + ((opt_data.children && opt_data.children.length > 0) ? aui.navigation.nav({items: opt_data.children, selectedItemKey: opt_data.selectedItemKey, isChild: true}) : '') + '</li>';
+    return '<li class="' + ((opt_data.isSelected || opt_data.key && opt_data.selectedItemKey == opt_data.key) ? 'aui-nav-selected' : '') + aui.renderExtraClasses(opt_data) + '"' + ((opt_data.isCollapsible && opt_data.children && opt_data.children.length > 0) ? 'aria-expanded="' + ((opt_data.isCollapsed) ? 'false' : 'true') + '"' : '') + aui.renderExtraAttributes(opt_data) + '>' + ((opt_data.children && opt_data.children.length > 0 && opt_data.isCollapsible) ? '<a href="#" class="aui-nav-subtree-toggle">' + aui.icons.icon({icon: opt_data.isCollapsed ? 'collapsed' : 'expanded', size: 'small', useIconFont: true}) + '</a>' : '') + '<a class="aui-nav-item" href="' + soy.$$escapeHtml(opt_data.href) + '">' + ((opt_data.iconClass && ! opt_data.isChild) ? aui.icons.icon({icon: opt_data.iconClass, size: 'small', useIconFont: true}) : '') + ((opt_data.count == 0 || opt_data.count) ? '<span class="aui-badge">' + soy.$$escapeHtml(opt_data.count) + '</span>' : '') + '<span class="aui-nav-item-label">' + soy.$$escapeHtml(opt_data.label) + '</span></a>' + ((opt_data.children && opt_data.children.length > 0) ? aui.navigation.nav({items: opt_data.children, selectedItemKey: opt_data.selectedItemKey, isChild: true}) : '') + '</li>';
   };
   if (goog.DEBUG) {
     aui.navigation.item.soyTemplateName = 'aui.navigation.item';
@@ -7037,8 +7037,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/page.js
-(typeof window === 'undefined' ? global : window).__fec57c67fb7a44da36634d65074499a7 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/page.js
+(typeof window === 'undefined' ? global : window).__51f3a5cbafa721cd8f2291e383dbbdcb = (function () {
   var module = {
     exports: {}
   };
@@ -7167,8 +7167,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/panel.js
-(typeof window === 'undefined' ? global : window).__1b325aa43347806bd32057c6e4335759 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/panel.js
+(typeof window === 'undefined' ? global : window).__c4cf828b1ce5cb023db3cbd79a726f13 = (function () {
   var module = {
     exports: {}
   };
@@ -7197,8 +7197,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/progress-tracker.js
-(typeof window === 'undefined' ? global : window).__f0c3c17667881d89c1ccef74be2715ec = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/progress-tracker.js
+(typeof window === 'undefined' ? global : window).__861bb20a2cf6529945cb239c3f1016a5 = (function () {
   var module = {
     exports: {}
   };
@@ -7272,8 +7272,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/sidebar.js
-(typeof window === 'undefined' ? global : window).__54cd804c5afb4f1833b9c980ca882d96 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/sidebar.js
+(typeof window === 'undefined' ? global : window).__736dd55a31168ebc71f178ff3ebaaf3f = (function () {
   var module = {
     exports: {}
   };
@@ -7303,8 +7303,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/table.js
-(typeof window === 'undefined' ? global : window).__8beed1d836d0fb9041502f37abdbebdb = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/table.js
+(typeof window === 'undefined' ? global : window).__1a7ebf8b0703b8088f3d62cf8ffc36a7 = (function () {
   var module = {
     exports: {}
   };
@@ -7333,8 +7333,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/tabs.js
-(typeof window === 'undefined' ? global : window).__207e3f82930a5fd390b32bcbaed8b35b = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/tabs.js
+(typeof window === 'undefined' ? global : window).__0a4a2df3a4c8eb8985499066a31b3360 = (function () {
   var module = {
     exports: {}
   };
@@ -7387,8 +7387,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/toolbar.js
-(typeof window === 'undefined' ? global : window).__e77169a5f7bac10bf65cee9ff63ac10f = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/toolbar.js
+(typeof window === 'undefined' ? global : window).__333e7af0bb7be44fe87bc4e0364ba6b5 = (function () {
   var module = {
     exports: {}
   };
@@ -7491,8 +7491,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/toolbar2.js
-(typeof window === 'undefined' ? global : window).__4706d35b437504082d227698ea82e6f4 = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/toolbar2.js
+(typeof window === 'undefined' ? global : window).__d59a925f194bc43d30c505189fa10250 = (function () {
   var module = {
     exports: {}
   };
@@ -7538,8 +7538,8 @@
   
   return module.exports;
 }).call(this);
-// .tmp/compiled-soy/trigger.js
-(typeof window === 'undefined' ? global : window).__4e263d7fd0c732c1db1add393ed29c8b = (function () {
+// node_modules/@atlassian/aui/.tmp/compiled-soy/trigger.js
+(typeof window === 'undefined' ? global : window).__d9a036ac444660730c9b256fa69cac2c = (function () {
   var module = {
     exports: {}
   };
@@ -7569,8 +7569,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui-soy.js
-(typeof window === 'undefined' ? global : window).__c48696cded18350e6bd9b715c13c3e8e = (function () {
+// node_modules/@atlassian/aui/src/js/aui-soy.js
+(typeof window === 'undefined' ? global : window).__650ba1a479cd52cd52d1bcb7b3aac221 = (function () {
   var module = {
     exports: {}
   };
@@ -7582,61 +7582,85 @@
     value: true
   });
   
-  __54e4b8b90296f4ddc548db76b0b9d781;
+  __7370d4d8dc016de7133a750a6ba08425;
   
-  __2d33db0d9631310e0d91e7f30da8912f;
+  __b4fccc98d9f9288402063b660507e61a;
   
-  __6e08265924ed824cb6d9b5014235ea1b;
+  __cc63fcd8c036f4dbee0e6ad07538ba93;
   
-  __4964959e6f5920a9f882c5170b39a77f;
+  __ff1828d96f4a55f33636289f9fb5066c;
   
-  __51104c16164551274f9305cc6f86afbe;
+  __912f37764c1b10b92dca9b9b0698bbc0;
   
-  __bfd9a46468d0dad66fc42c14e79cae33;
+  __d345217ece82b68ea78eaba111938358;
   
-  __bf86e4e2d5202cab2a3cea56542f8437;
+  __07d991b7c9dfab7cd21e0876145c4b59;
   
-  __4dc12184e325ee050ace2486d6f60785;
+  __cfdee922eb92c9266d710b242cf90018;
   
-  __470170a9dcfcab10e601200b6c6151be;
+  __64ff6df84080619cea4cc7d3f83ce124;
   
-  __4dc9c3675c6f1ec0c8b85aa224729cb9;
+  __fb5ae7b6c33ecf744c5e3d7fd597aaf6;
   
-  __eaf55c4df70d1b8c050443729afe6410;
+  __ddab5c27d571a2838fab1335148f42c0;
   
-  __884ed61f9daa05df2031281b2f8861b8;
+  __9bb7ee6f367f17ef2ea7488e5e44bd19;
   
-  __c72f1c65cfadb3bff1995449a4770b6f;
+  __b1777d91fdd3ca3b0840826b0320bf4d;
   
-  __261e4deda17455c5ed7104b43c461cd4;
+  __888c6d0c6a1b9b832d5a662c16e9cdd4;
   
-  __41fe3e31ae1711597b75c1366bbe2865;
+  __7a8ab8fdc4dc4ed95a9b0e83fb8e6fa5;
   
-  __ff4c2d538902d7c121bf21e82c56b4ff;
+  __0f4608fbf316399c114bfe6cbe30f441;
   
-  __7e6543b7407f2ac9bde46137a1fac7da;
+  __3da081d6eaa76745c95664a9b959e5a9;
   
-  __e0daffd184f5254ed34a416b45d3a5de;
+  __21924d82b6437e81624bc6b5fb12ac8a;
   
-  __fec57c67fb7a44da36634d65074499a7;
+  __51f3a5cbafa721cd8f2291e383dbbdcb;
   
-  __1b325aa43347806bd32057c6e4335759;
+  __c4cf828b1ce5cb023db3cbd79a726f13;
   
-  __f0c3c17667881d89c1ccef74be2715ec;
+  __861bb20a2cf6529945cb239c3f1016a5;
   
-  __54cd804c5afb4f1833b9c980ca882d96;
+  __736dd55a31168ebc71f178ff3ebaaf3f;
   
-  __8beed1d836d0fb9041502f37abdbebdb;
+  __1a7ebf8b0703b8088f3d62cf8ffc36a7;
   
-  __207e3f82930a5fd390b32bcbaed8b35b;
+  __0a4a2df3a4c8eb8985499066a31b3360;
   
-  __e77169a5f7bac10bf65cee9ff63ac10f;
+  __333e7af0bb7be44fe87bc4e0364ba6b5;
   
-  __4706d35b437504082d227698ea82e6f4;
+  __d59a925f194bc43d30c505189fa10250;
   
-  __4e263d7fd0c732c1db1add393ed29c8b;
+  __d9a036ac444660730c9b256fa69cac2c;
   
   exports.default = window.aui;
+  module.exports = exports['default'];
+  
+  return module.exports;
+}).call(this);
+// src/js/aui-soy.js
+(typeof window === 'undefined' ? global : window).__9c0be71f8c31a364777e742dcf99aa9e = (function () {
+  var module = {
+    exports: {}
+  };
+  var exports = module.exports;
+  
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _auiSoy = __650ba1a479cd52cd52d1bcb7b3aac221;
+  
+  var _auiSoy2 = _interopRequireDefault(_auiSoy);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = _auiSoy2.default;
   module.exports = exports['default'];
   
   return module.exports;

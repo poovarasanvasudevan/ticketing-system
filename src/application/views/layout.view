@@ -2,7 +2,7 @@
 <head>
     <title>App</title>
 
-    <link rel="stylesheet" href="/static/css/aui.min.css"/>
+    <link rel="stylesheet" href="/static/css/aui.css"/>
     <link rel="stylesheet" href="/static/css/simple-grid.css"/>
     <link rel="stylesheet" href="/static/css/aui-experimental.css"/>
     <link rel="stylesheet" href="/static/css/aui-iconfonts.min.css"/>

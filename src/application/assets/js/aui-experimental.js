@@ -1,12 +1,12 @@
-/*!!
+/*!
  * @atlassian/aui - Atlassian User Interface Framework
- * @version v7.9.9
+ * @version v6.1.3
  * @link https://docs.atlassian.com/aui/latest/
- * @license SEE LICENSE IN LICENSE.md
- * @author Atlassian Pty Ltd.
+ * @license Apache-2.0
+ * @author [object Object]
  */
-// src/js/aui/polyfills/placeholder.js
-(typeof window === 'undefined' ? global : window).__cf0b3df2c677eb2f0864bd7dbf5cb857 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/polyfills/placeholder.js
+(typeof window === 'undefined' ? global : window).__c2529721e056b137d5dc332217e3a9a0 = (function () {
   var module = {
     exports: {}
   };
@@ -14,11 +14,11 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
@@ -54,8 +54,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/banner.js
-(typeof window === 'undefined' ? global : window).__43174540fe92a0d9aeac77ff3a236665 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/banner.js
+(typeof window === 'undefined' ? global : window).__86c5d8458771884814420d1e592e5434 = (function () {
   var module = {
     exports: {}
   };
@@ -67,21 +67,21 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _animation = __6debdf74a4da8ac8391a98223e1bae21;
+  var _animation = __1e5eff515fb8ea62ccd80d65455e88cd;
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _template = __43d4585c6a21591b4ceac1b326c09405;
+  var _template = __c33b5453d0277383a3121d7d42efa93d;
   
   var _template2 = _interopRequireDefault(_template);
   
@@ -143,8 +143,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/button.js
-(typeof window === 'undefined' ? global : window).__eaacbdad8b92ceca9114dc3be870abe7 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/button.js
+(typeof window === 'undefined' ? global : window).__ba22a6a0f9889bb04a6764c4bc4865a0 = (function () {
   var module = {
     exports: {}
   };
@@ -152,25 +152,25 @@
   
   'use strict';
   
-  var _log = __c1e961001275c079e48525ad3a48c8c2;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
+  
+  var _jquery2 = _interopRequireDefault(_jquery);
+  
+  var _log = __8139e9a1368a0224fc430963d21930c8;
   
   var logger = _interopRequireWildcard(_log);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _spinner = __6c1bd26c14066cf537a86a0966c2d4fc;
-  
-  var _spinner2 = _interopRequireDefault(_spinner);
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
   
   function _isBusy(button) {
       return button.hasAttribute('aria-busy') && button.getAttribute('aria-busy') === 'true';
@@ -182,10 +182,6 @@
   
   (0, _skate2.default)('aui-button', {
       type: _skate2.default.type.CLASSNAME,
-      created: function created(element) {
-          element._spinner = new _spinner2.default();
-          element._spinner.setAttribute('size', _spinner.SIZE.SMALL.name);
-      },
       prototype: {
           /**
            * Adds a spinner to the button and hides the text
@@ -198,7 +194,7 @@
                   return this;
               }
   
-              this.appendChild(this._spinner);
+              (0, _jquery2.default)(this).spin();
               this.setAttribute('aria-busy', true);
               this.setAttribute('busy', '');
   
@@ -216,7 +212,7 @@
                   return this;
               }
   
-              this.removeChild(this._spinner);
+              (0, _jquery2.default)(this).spinStop();
               this.removeAttribute('aria-busy');
               this.removeAttribute('busy');
   
@@ -243,8 +239,8 @@
   
   return module.exports;
 }).call(this);
-// src/js-vendor/jquery/jquery.tipsy.js
-(typeof window === 'undefined' ? global : window).__8c05d85e3d7fb791ad5071fea16ddb09 = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/jquery/jquery.tipsy.js
+(typeof window === 'undefined' ? global : window).__cc64a0d7c308ad5954e00f06c2bcc6ed = (function () {
   var module = {
     exports: {}
   };
@@ -593,8 +589,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/tooltip.js
-(typeof window === 'undefined' ? global : window).__e8e9fc435c352b74c65e5f8d64ed692c = (function () {
+// node_modules/@atlassian/aui/src/js/aui/tooltip.js
+(typeof window === 'undefined' ? global : window).__65bf2e9d62756879a7805c63dea11935 = (function () {
   var module = {
     exports: {}
   };
@@ -602,11 +598,11 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __8c05d85e3d7fb791ad5071fea16ddb09;
+  __cc64a0d7c308ad5954e00f06c2bcc6ed;
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -678,8 +674,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/checkbox-multiselect.js
-(typeof window === 'undefined' ? global : window).__44b5db0744691769a2b746c10f14a9a9 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/checkbox-multiselect.js
+(typeof window === 'undefined' ? global : window).__de170d5d90568334e1ab26d28697cb93 = (function () {
   var module = {
     exports: {}
   };
@@ -691,25 +687,25 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __63997c0b88d4f299b5d69bd1c1668c63;
+  __71933b3476b0bdf1f1eaaf188014d1aa;
   
-  __e8e9fc435c352b74c65e5f8d64ed692c;
+  __65bf2e9d62756879a7805c63dea11935;
   
-  __fa714f1b12d7502957e4e0b6196321bf;
+  __ff21a71b857b101095156bf4ff8b27ac;
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _uniqueId = __a0ab588de7b0759818853425dc8ad2f2;
+  var _uniqueId = __327dbe0b6617f3273ea9b3fc2d1dda83;
   
   var _uniqueId2 = _interopRequireDefault(_uniqueId);
   
@@ -1025,8 +1021,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/dialog2.js
-(typeof window === 'undefined' ? global : window).__df7047d25e7ae0c2f22a17f939177597 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/dialog2.js
+(typeof window === 'undefined' ? global : window).__abec049fae3e0e24b94d659c3600ba01 = (function () {
   var module = {
     exports: {}
   };
@@ -1038,23 +1034,23 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _layer = __3ada4a8272640e5242be87f12c7e0fdf;
+  var _layer = __b16464bbf0aa314bacb753553ada098e;
   
   var _layer2 = _interopRequireDefault(_layer);
   
-  var _widget = __d2e8fc66dac2ecebdc205fcab991f687;
+  var _widget = __ecaadce486e7be7002d8453fc51f9873;
   
   var _widget2 = _interopRequireDefault(_widget);
   
@@ -1156,8 +1152,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/expander.js
-(typeof window === 'undefined' ? global : window).__0477e1bf0caf4e570768f66b495137e7 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/expander.js
+(typeof window === 'undefined' ? global : window).__bdcd8cba16e83e973cb8146ddb843c38 = (function () {
   var module = {
     exports: {}
   };
@@ -1165,16 +1161,17 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
-  var $document = (0, _jquery2.default)(document);
+  var $document = (0, _jquery2.default)(document),
+  
   
   //convenience function because this needs to be run for all the events.
-  var getExpanderProperties = function getExpanderProperties(event) {
+  getExpanderProperties = function getExpanderProperties(event) {
       var properties = {};
   
       properties.$trigger = (0, _jquery2.default)(event.currentTarget);
@@ -1187,9 +1184,8 @@
       properties.replaceSelector = properties.$trigger.data('replace-selector');
   
       return properties;
-  };
-  
-  var replaceText = function replaceText(properties) {
+  },
+      replaceText = function replaceText(properties) {
       if (properties.replaceText) {
           var $replaceElement = properties.replaceSelector ? properties.$trigger.find(properties.replaceSelector) : properties.$trigger;
   
@@ -1197,7 +1193,6 @@
           $replaceElement.text(properties.replaceText);
       }
   };
-  
   //events that the expander listens to
   var EXPANDER_EVENTS = {
       'aui-expander-invoke': function auiExpanderInvoke(event) {
@@ -1277,8 +1272,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/flag.js
-(typeof window === 'undefined' ? global : window).__fdc0359427714432468af96b460aa252 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/flag.js
+(typeof window === 'undefined' ? global : window).__b50249c6901293cd03d256e40a6d0941 = (function () {
   var module = {
     exports: {}
   };
@@ -1290,29 +1285,29 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _animation = __6debdf74a4da8ac8391a98223e1bae21;
+  var _animation = __1e5eff515fb8ea62ccd80d65455e88cd;
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _keyCode = __e246bf93af36eb4453f35afeb1c302d9;
+  var _keyCode = __d92d89c196b4703777e79d25a9f94b7f;
   
   var _keyCode2 = _interopRequireDefault(_keyCode);
   
-  var _template = __43d4585c6a21591b4ceac1b326c09405;
+  var _template = __c33b5453d0277383a3121d7d42efa93d;
   
   var _template2 = _interopRequireDefault(_template);
   
-  var _customEvent = __f7a5e0d2ea8865b104efc9b94861591e;
+  var _customEvent = __2e94b36d616dffee0a6f911bf22a83ae;
   
   var _customEvent2 = _interopRequireDefault(_customEvent);
   
@@ -1436,8 +1431,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/form-notification.js
-(typeof window === 'undefined' ? global : window).__4e3ec9eab102d61251e1822630f72c09 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/form-notification.js
+(typeof window === 'undefined' ? global : window).__1e855e59e13e8847a5ed5441e3fd1919 = (function () {
   var module = {
     exports: {}
   };
@@ -1445,25 +1440,25 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __8c05d85e3d7fb791ad5071fea16ddb09;
+  __cc64a0d7c308ad5954e00f06c2bcc6ed;
   
-  var _log = __c1e961001275c079e48525ad3a48c8c2;
+  var _log = __8139e9a1368a0224fc430963d21930c8;
   
   var logger = _interopRequireWildcard(_log);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _keyCode = __e246bf93af36eb4453f35afeb1c302d9;
+  var _keyCode = __d92d89c196b4703777e79d25a9f94b7f;
   
   var _keyCode2 = _interopRequireDefault(_keyCode);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
@@ -1817,8 +1812,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/form-validation/validator-register.js
-(typeof window === 'undefined' ? global : window).__5746c3dc0d9d4c30df5b0c1dc2a92a90 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/form-validation/validator-register.js
+(typeof window === 'undefined' ? global : window).__cb2668f6be8871c04f859d8f8e5a8ab1 = (function () {
   var module = {
     exports: {}
   };
@@ -1830,15 +1825,15 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _log = __c1e961001275c079e48525ad3a48c8c2;
+  var _log = __8139e9a1368a0224fc430963d21930c8;
   
   var logger = _interopRequireWildcard(_log);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
@@ -1912,8 +1907,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/form-validation/basic-validators.js
-(typeof window === 'undefined' ? global : window).__bd17153ec513fce3d14cee034d5c4bee = (function () {
+// node_modules/@atlassian/aui/src/js/aui/form-validation/basic-validators.js
+(typeof window === 'undefined' ? global : window).__fd675ae360bd5d9c547d27c9176b93ea = (function () {
   var module = {
     exports: {}
   };
@@ -1921,23 +1916,23 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _format = __d31562b45156ec0db003c1af006240d5;
+  var _format = __0d2ce34ae8c23f21d43215f7cc5928d7;
   
   var _format2 = _interopRequireDefault(_format);
   
-  var _i18n = __fa714f1b12d7502957e4e0b6196321bf;
+  var _i18n = __ff21a71b857b101095156bf4ff8b27ac;
   
   var _i18n2 = _interopRequireDefault(_i18n);
   
-  var _validatorRegister = __5746c3dc0d9d4c30df5b0c1dc2a92a90;
+  var _validatorRegister = __cb2668f6be8871c04f859d8f8e5a8ab1;
   
   var _validatorRegister2 = _interopRequireDefault(_validatorRegister);
   
@@ -2174,8 +2169,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/form-validation.js
-(typeof window === 'undefined' ? global : window).__276ead0c2b803a087db4ce7a0d05053e = (function () {
+// node_modules/@atlassian/aui/src/js/aui/form-validation.js
+(typeof window === 'undefined' ? global : window).__2635f44381995ca51e130dad1479fffd = (function () {
   var module = {
     exports: {}
   };
@@ -2187,31 +2182,31 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __4e3ec9eab102d61251e1822630f72c09;
+  __1e855e59e13e8847a5ed5441e3fd1919;
   
-  __bd17153ec513fce3d14cee034d5c4bee;
+  __fd675ae360bd5d9c547d27c9176b93ea;
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _deprecation = __921ad9514d56376fef992861d9ec0f51;
+  var _deprecation = __9ea35e3451360b72ebe8cb8006239936;
   
   var deprecate = _interopRequireWildcard(_deprecation);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _validatorRegister = __5746c3dc0d9d4c30df5b0c1dc2a92a90;
+  var _validatorRegister = __cb2668f6be8871c04f859d8f8e5a8ab1;
   
   var _validatorRegister2 = _interopRequireDefault(_validatorRegister);
   
@@ -2590,8 +2585,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/constants.js
-(typeof window === 'undefined' ? global : window).__584af8690b0248d0ffcba682ccaa70ba = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/constants.js
+(typeof window === 'undefined' ? global : window).__b2cfc977d45980ce4c29f90ea86d5180 = (function () {
   var module = {
     exports: {}
   };
@@ -2604,12 +2599,15 @@
   });
   var INPUT_SUFFIX = '-input';
   
-  exports.INPUT_SUFFIX = INPUT_SUFFIX;
+  exports.default = {
+      INPUT_SUFFIX: INPUT_SUFFIX
+  };
+  module.exports = exports['default'];
   
   return module.exports;
 }).call(this);
-// src/js/aui/label.js
-(typeof window === 'undefined' ? global : window).__4686fdb214d2270ff96c190b2bd6bd2d = (function () {
+// node_modules/@atlassian/aui/src/js/aui/label.js
+(typeof window === 'undefined' ? global : window).__bb2eb5d964bbb49080eaffc7a1d17cbf = (function () {
   var module = {
     exports: {}
   };
@@ -2621,19 +2619,19 @@
       value: true
   });
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _skatejsTemplateHtml = __c6b5725916d210b9653318d2ea2472cb;
+  var _skatejsTemplateHtml = __19c740e7a69d815ecec16b8dd69f0e00;
   
   var _skatejsTemplateHtml2 = _interopRequireDefault(_skatejsTemplateHtml);
   
-  var _enforcer = __2512e2cfb8f46670d5cb777690a28c72;
+  var _enforcer = __da99b881b3bdaf63767de8d2780ca44c;
   
   var _enforcer2 = _interopRequireDefault(_enforcer);
   
-  var _constants = __584af8690b0248d0ffcba682ccaa70ba;
+  var _constants = __b2cfc977d45980ce4c29f90ea86d5180;
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -2695,8 +2693,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/progress-indicator.js
-(typeof window === 'undefined' ? global : window).__6e7c4718c7a654752224497662064b97 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/progress-indicator.js
+(typeof window === 'undefined' ? global : window).__d3ebcf189654ce92803791fd3e76baad = (function () {
   var module = {
     exports: {}
   };
@@ -2708,37 +2706,17 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _underscore = __59c1c30030f41c99b6757d449d9a3a7b;
+  var _animation = __1e5eff515fb8ea62ccd80d65455e88cd;
   
-  var _underscore2 = _interopRequireDefault(_underscore);
-  
-  var _skatejs = __8548ccf5d6767d1d4e6633309de41309;
-  
-  var _skatejs2 = _interopRequireDefault(_skatejs);
-  
-  var _animation = __6debdf74a4da8ac8391a98223e1bae21;
-  
-  var _browser = __7a2976c482edfafd9b5879a49ffe0535;
-  
-  var _deprecation = __921ad9514d56376fef992861d9ec0f51;
-  
-  var deprecate = _interopRequireWildcard(_deprecation);
-  
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-  
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  var afterTransitionEvent = 'aui-progress-indicator-after-update';
-  var beforeTransitionEvent = 'aui-progress-indicator-before-update';
-  var transitionEnd = 'transitionend webkitTransitionEnd';
   
   function updateProgress($progressBar, $progressBarContainer, progressValue) {
       (0, _animation.recomputeStyle)($progressBar);
@@ -2746,254 +2724,59 @@
       $progressBarContainer.attr('data-value', progressValue);
   }
   
-  function updateProgressElement(element, value) {
-      if (typeof element === 'string') {
-          var el = document.getElementById(element);
-          if (el) {
-              element = el;
-          }
-      }
-      var $progressBarContainer = (0, _jquery2.default)(element).first();
-      var $progressBar = $progressBarContainer.children('.aui-progress-indicator-value');
-      var valueAttribute = $progressBarContainer.attr('data-value');
-      var isIndeterminate = !valueAttribute;
-      var currentProgress = parseFloat(valueAttribute) || 0;
-      var isProgressNotChanged = valueAttribute && currentProgress === value;
-  
-      // AUI-4771 - check for mis-configured legacy progress bar HTML.
-      if (isProgressNotChanged) {
-          var currentDemonstratedValue = parseFloat($progressBar.get(0).style.width) || 0;
-          isProgressNotChanged = currentProgress === currentDemonstratedValue * 100;
-      }
-  
-      if (isProgressNotChanged) {
-          return;
-      }
-  
-      //if the progress bar is indeterminate switch it.
-      if (isIndeterminate) {
-          $progressBar.css('width', 0);
-      }
-  
-      transitionProgress($progressBar, $progressBarContainer, { currentProgress: currentProgress, value: value });
-  
-      return $progressBarContainer;
-  }
-  
-  function transitionProgress(progressBar, progressBarContainer, _ref) {
-      var currentProgress = _ref.currentProgress,
-          value = _ref.value;
-  
-      var $progressBar = (0, _jquery2.default)(progressBar);
-      var $progressBarContainer = (0, _jquery2.default)(progressBarContainer);
-  
-      if (typeof value === 'number' && value <= 1 && value >= 0) {
-          $progressBarContainer.trigger(beforeTransitionEvent, [currentProgress, value]);
-  
-          //trigger the event after transition end if supported, otherwise just trigger it
-          if ((0, _browser.supportsCssTransition)()) {
-              $progressBar.one(transitionEnd, function () {
-                  $progressBarContainer.trigger(afterTransitionEvent, [currentProgress, value]);
-              });
-              updateProgress($progressBar, $progressBarContainer, value);
-          } else {
-              updateProgress($progressBar, $progressBarContainer, value);
-              $progressBarContainer.trigger(afterTransitionEvent, [currentProgress, value]);
-          }
-      }
-  }
-  
-  function setIndeterminateOnProgressElement(element) {
-      var $progressBarContainer = (0, _jquery2.default)(element).first();
-      var $progressBar = $progressBarContainer.children('.aui-progress-indicator-value');
-  
-      $progressBarContainer.removeAttr('data-value');
-      (0, _animation.recomputeStyle)($progressBarContainer);
-      $progressBar.css('width', '');
-  }
-  
-  var DEFAULTS = {
-      indeterminate: false,
-      max: 1,
-      val: 0
-  };
-  
-  function validNumeric(val) {
-      return _underscore2.default.isNumber(val) && _underscore2.default.isFinite(val) && !_underscore2.default.isNaN(val);
-  }
-  
-  function parseNumeric(val) {
-      var defaultVal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-  
-      var num = parseFloat(val);
-      return validNumeric(num) ? num : Number(defaultVal);
-  }
-  
-  function parseDecimal(num) {
-      var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-  
-      return Number(parseFloat(num).toFixed(precision));
-  }
-  
-  function safeValue(val, max) {
-      return Math.max(0, Math.min(val, max));
-  }
-  
-  function safeMax(max) {
-      return max > 0 ? max : DEFAULTS.max;
-  }
-  
-  /**
-   * @param data the state
-   * @returns {{max: number, val: number, valAsFraction: number, valAsPercent: number}}
-   */
-  function calc(data) {
-      var val = data.val,
-          max = data.max;
-  
-      var parsedMax = safeMax(max);
-      var parsedVal = safeValue(val, parsedMax);
-      var valAsFraction = parseDecimal(parsedVal / parsedMax, 6);
-      var valAsPercent = parseDecimal(valAsFraction * 100, 2);
-      return { max: parsedMax, val: parsedVal, valAsFraction: valAsFraction, valAsPercent: valAsPercent };
-  }
-  
-  function refresh(el) {
-      var _calc = calc(el._data),
-          val = _calc.val,
-          valAsFraction = _calc.valAsFraction,
-          max = _calc.max;
-  
-      var bar = el.querySelector('.aui-progress-indicator');
-      var oldVal = bar.getAttribute('data-value');
-  
-      if (el.indeterminate) {
-          bar.removeAttribute('aria-valuenow');
-          setIndeterminateOnProgressElement(bar);
-      } else {
-          bar.setAttribute('aria-valuenow', val);
-          bar.setAttribute('aria-valuemax', max);
-          transitionProgress(bar.querySelector('.aui-progress-indicator-value'), bar, {
-              currentProgress: oldVal,
-              value: valAsFraction
-          });
-      }
-  }
-  
-  function setValue(el, data) {
-      el._data.val = parseNumeric(data.newValue, data.oldValue || DEFAULTS.val);
-      refresh(el);
-  }
-  
-  function setMax(el, data) {
-      el._data.max = parseNumeric(data.newValue, data.oldValue || DEFAULTS.max);
-      refresh(el);
-  }
-  
-  (0, _skatejs2.default)('aui-progressbar', {
-      template: function template(el) {
-          // Ensure max is set before value upon element creation and before rendering.
-          // Why is this happening in 'template' and not 'created'? Because it gets called before 'created'!
-          el._data.max = parseNumeric(el.getAttribute('max'), DEFAULTS.max);
-          el._data.val = parseNumeric(el.getAttribute('value'), DEFAULTS.val);
-          el._data.indeterminate = el.hasAttribute('indeterminate');
-  
-          var _calc2 = calc(el._data),
-              val = _calc2.val,
-              max = _calc2.max,
-              valAsFraction = _calc2.valAsFraction,
-              valAsPercent = _calc2.valAsPercent;
-  
-          var legacyValue = el._data.indeterminate ? '' : 'data-value="' + valAsFraction + '"';
-  
-          el.innerHTML = '<div class="aui-progress-indicator"\n         ' + legacyValue + '\n         role="progressbar"\n         aria-valuemin="0"\n         aria-valuenow="' + val + '"\n         aria-valuemax="' + max + '"\n         tabindex="0"\n     >\n        <span class="aui-progress-indicator-value" style="width: ' + valAsPercent + '%"></span>\n    </div>';
-      },
-      attached: function attached(el) {
-          refresh(el);
-      },
-  
-  
-      attributes: {
-          indeterminate: {
-              created: function created(el) {
-                  el.indeterminate = true;
-              },
-              removed: function removed(el) {
-                  el.indeterminate = false;
-              }
-          },
-          value: {
-              value: DEFAULTS.val,
-              fallback: function fallback(el, data) {
-                  if (el._updating) return false;
-                  setValue(el, data);
-              }
-          },
-          max: {
-              value: DEFAULTS.max,
-              fallback: function fallback(el, data) {
-                  if (el._updating) return false;
-                  setMax(el, data);
-              }
-          }
-      },
-  
-      prototype: {
-          get _data() {
-              return this.__data || (this._data = _underscore2.default.defaults({}, DEFAULTS));
-          },
-          set _data(d) {
-              return this.__data = d;
-          },
-          get indeterminate() {
-              return this._data.indeterminate;
-          },
-          set indeterminate(val) {
-              this._data.indeterminate = !!val;
-              refresh(this);
-          },
-          get value() {
-              var _calc3 = calc(this._data),
-                  val = _calc3.val;
-  
-              return val;
-          },
-          set value(num) {
-              if (!validNumeric(num)) return false;
-              var data = { newValue: parseDecimal(num, 6) };
-              this._updating = true;
-              // Reflect whatever value is set in the attributes.
-              this.setAttribute('value', data.newValue);
-              this._updating = false;
-              setValue(this, data);
-          },
-          get max() {
-              var _calc4 = calc(this._data),
-                  max = _calc4.max;
-  
-              return max;
-          },
-          set max(num) {
-              if (!validNumeric(num)) return false;
-              var data = { newValue: parseDecimal(num, 6) };
-              this._updating = true;
-              // Reflect whatever value is set in the attributes.
-              this.setAttribute('max', data.newValue);
-              this._updating = false;
-              setMax(this, data);
-          }
-      }
-  });
-  
   var progressBars = {
-      update: deprecate.fn(updateProgressElement, 'AJS.progressBars.update', {
-          sinceVersion: '7.7.0',
-          extraInfo: 'Use the <aui-progressbar> web component instead'
-      }),
-      setIndeterminate: deprecate.fn(setIndeterminateOnProgressElement, 'AJS.progressBars.setIndeterminate', {
-          sinceVersion: '7.7.0',
-          extraInfo: 'Use the <aui-progressbar> web component instead'
-      })
+      update: function update(element, value) {
+          var $progressBarContainer = (0, _jquery2.default)(element).first();
+          var $progressBar = $progressBarContainer.children('.aui-progress-indicator-value');
+          var valueAttribute = $progressBarContainer.attr('data-value');
+          var currentProgress = parseFloat(valueAttribute) || 0;
+          var isProgressNotChanged = valueAttribute && currentProgress === value;
+  
+          if (isProgressNotChanged) {
+              return;
+          }
+  
+          var afterTransitionEvent = 'aui-progress-indicator-after-update';
+          var beforeTransitionEvent = 'aui-progress-indicator-before-update';
+          var transitionEnd = 'transitionend webkitTransitionEnd';
+  
+          var isIndeterminate = !valueAttribute;
+  
+          //if the progress bar is indeterminate switch it.
+          if (isIndeterminate) {
+              $progressBar.css('width', 0);
+          }
+  
+          if (typeof value === 'number' && value <= 1 && value >= 0) {
+              $progressBarContainer.trigger(beforeTransitionEvent, [currentProgress, value]);
+  
+              //detect whether transitions are supported
+              var documentBody = document.body || document.documentElement;
+              var style = documentBody.style;
+              var isTransitionSupported = typeof style.transition === 'string' || typeof style.WebkitTransition === 'string';
+  
+              //trigger the event after transition end if supported, otherwise just trigger it
+              if (isTransitionSupported) {
+                  $progressBar.one(transitionEnd, function () {
+                      $progressBarContainer.trigger(afterTransitionEvent, [currentProgress, value]);
+                  });
+                  updateProgress($progressBar, $progressBarContainer, value);
+              } else {
+                  updateProgress($progressBar, $progressBarContainer, value);
+                  $progressBarContainer.trigger(afterTransitionEvent, [currentProgress, value]);
+              }
+          }
+          return $progressBarContainer;
+      },
+  
+      setIndeterminate: function setIndeterminate(element) {
+          var $progressBarContainer = (0, _jquery2.default)(element).first();
+          var $progressBar = $progressBarContainer.children('.aui-progress-indicator-value');
+  
+          $progressBarContainer.removeAttr('data-value');
+          (0, _animation.recomputeStyle)($progressBarContainer);
+          $progressBar.css('width', '100%');
+      }
   };
   
   (0, _globalize2.default)('progressBars', progressBars);
@@ -3003,8 +2786,8 @@
   
   return module.exports;
 }).call(this);
-// src/js-vendor/backbone/backbone.js
-(typeof window === 'undefined' ? global : window).__b6ce661a78f7af3f026ea6e982ba4efe = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/backbone/backbone.js
+(typeof window === 'undefined' ? global : window).__7f5160581b44ef9ed6fba14191814689 = (function () {
   var module = {
     exports: {}
   };
@@ -3012,10 +2795,10 @@
   var defineDependencies = {
     "module": module,
     "exports": exports,
-    "underscore": __81a34191ad3e61fcf21096871eebec4b,
-    "jquery": __700a145ba3db9966cc95664c892049f8,
-    "underscore": __81a34191ad3e61fcf21096871eebec4b,
-    "jquery": __700a145ba3db9966cc95664c892049f8
+    "underscore": __309cc7b5b5b5e38c9aaa43f19c161b66,
+    "jquery": __02fa0d2334b5d2f9701871403ba9d89a,
+    "underscore": __309cc7b5b5b5e38c9aaa43f19c161b66,
+    "jquery": __02fa0d2334b5d2f9701871403ba9d89a
   };
   var define = function defineReplacementWrapper(generatedModuleName) {
     return function defineReplacement(name, deps, func) {
@@ -3058,7 +2841,7 @@
         exports = module.exports = rval;
       }
     };
-  }("__b6ce661a78f7af3f026ea6e982ba4efe");
+  }("__7f5160581b44ef9ed6fba14191814689");
   define.amd = true;
   
   /*! THIS FILE HAS BEEN MODIFIED BY ATLASSIAN. Modified lines are marked below, search "ATLASSIAN" */
@@ -3085,8 +2868,8 @@
   
           // Next for Node.js or CommonJS. jQuery may not be needed as a module.
       } else if (typeof exports !== 'undefined') {
-          var _ = __81a34191ad3e61fcf21096871eebec4b, $;
-          try { $ = __700a145ba3db9966cc95664c892049f8; } catch(e) {}
+          var _ = __309cc7b5b5b5e38c9aaa43f19c161b66, $;
+          try { $ = __02fa0d2334b5d2f9701871403ba9d89a; } catch(e) {}
           factory(root, exports, _, $);
   
           // Finally, as a browser global.
@@ -3142,7 +2925,7 @@
     * // Require Underscore, if we're on the server, and it's not already present.
     * var _ = root._;
     *
-    * if (!_ && (typeof require !== 'undefined')) _ = __81a34191ad3e61fcf21096871eebec4b;
+    * if (!_ && (typeof require !== 'undefined')) _ = __309cc7b5b5b5e38c9aaa43f19c161b66;
     *
     /** END ATLASSIAN */
   
@@ -4698,8 +4481,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/backbone.js
-(typeof window === 'undefined' ? global : window).__320e4ec293ac29d49b959aa9d46df68f = (function () {
+// node_modules/@atlassian/aui/src/js/aui/backbone.js
+(typeof window === 'undefined' ? global : window).__a0f8accf3e15b29165e7a143e435af91 = (function () {
   var module = {
     exports: {}
   };
@@ -4711,11 +4494,11 @@
       value: true
   });
   
-  var _underscore = __59c1c30030f41c99b6757d449d9a3a7b;
+  var _underscore = __17253d01a5dbb7811399698870024390;
   
   var _underscore2 = _interopRequireDefault(_underscore);
   
-  var _backbone = __b6ce661a78f7af3f026ea6e982ba4efe;
+  var _backbone = __7f5160581b44ef9ed6fba14191814689;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
@@ -4730,8 +4513,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/progressive-data-set.js
-(typeof window === 'undefined' ? global : window).__4f7eb6cf60845d0cd685bf4d782df3ea = (function () {
+// node_modules/@atlassian/aui/src/js/aui/progressive-data-set.js
+(typeof window === 'undefined' ? global : window).__f1c85bac91549fc7b83aaa27ba2694e9 = (function () {
   var module = {
     exports: {}
   };
@@ -4743,15 +4526,15 @@
       value: true
   });
   
-  var _underscore = __59c1c30030f41c99b6757d449d9a3a7b;
+  var _underscore = __17253d01a5dbb7811399698870024390;
   
   var _underscore2 = _interopRequireDefault(_underscore);
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
@@ -4994,8 +4777,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/query-input.js
-(typeof window === 'undefined' ? global : window).__db4bee34c60bbc169d83f2674d47aa48 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/query-input.js
+(typeof window === 'undefined' ? global : window).__441c338a795b16645d3af32425aefa8e = (function () {
   var module = {
     exports: {}
   };
@@ -5007,15 +4790,15 @@
       value: true
   });
   
-  var _underscore = __59c1c30030f41c99b6757d449d9a3a7b;
+  var _underscore = __17253d01a5dbb7811399698870024390;
   
   var _underscore2 = _interopRequireDefault(_underscore);
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
@@ -5047,8 +4830,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/class-names.js
-(typeof window === 'undefined' ? global : window).__80eabeead1490f859f6a708858b1dc25 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/class-names.js
+(typeof window === 'undefined' ? global : window).__6cb6ba98d240ad8a464e632755835025 = (function () {
   var module = {
     exports: {}
   };
@@ -5085,8 +4868,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/custom-create-view.js
-(typeof window === 'undefined' ? global : window).__0d34270c41fe2d547efed0ce03f668c0 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/custom-create-view.js
+(typeof window === 'undefined' ? global : window).__32dbabf183ece2a8f2812e96fdcf2494 = (function () {
   var module = {
     exports: {}
   };
@@ -5098,7 +4881,7 @@
     value: true
   });
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
@@ -5109,8 +4892,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/custom-edit-view.js
-(typeof window === 'undefined' ? global : window).__15ac66f9a1559266d249b098cf180f35 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/custom-edit-view.js
+(typeof window === 'undefined' ? global : window).__1c6e1281c2c05202a8e43057ade05a58 = (function () {
   var module = {
     exports: {}
   };
@@ -5122,7 +4905,7 @@
     value: true
   });
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
@@ -5133,8 +4916,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/custom-read-view.js
-(typeof window === 'undefined' ? global : window).__ce5d8a803e1fd58153b33f9bb2fe0bff = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/custom-read-view.js
+(typeof window === 'undefined' ? global : window).__5034e307049b45a668379b8f49ea940f = (function () {
   var module = {
     exports: {}
   };
@@ -5146,7 +4929,7 @@
     value: true
   });
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
@@ -5157,8 +4940,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/data-keys.js
-(typeof window === 'undefined' ? global : window).__40ea873dae0b909ba7e1b6d5b37fd259 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/data-keys.js
+(typeof window === 'undefined' ? global : window).__92c78d58c645de42693045d4d3a79c1c = (function () {
   var module = {
     exports: {}
   };
@@ -5177,8 +4960,8 @@
   
   return module.exports;
 }).call(this);
-// src/js-vendor/jquery/serializetoobject.js
-(typeof window === 'undefined' ? global : window).__a66ae57438a6301a66d32681106ab1de = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/jquery/serializetoobject.js
+(typeof window === 'undefined' ? global : window).__19de5a4e8be2c6def66eba17e3819f1c = (function () {
   var module = {
     exports: {}
   };
@@ -5241,8 +5024,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/events.js
-(typeof window === 'undefined' ? global : window).__b912ac75391ff799576d1dfdc1dc3c70 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/events.js
+(typeof window === 'undefined' ? global : window).__a8a27edcadbb3291524b9ea43b8af4ce = (function () {
   var module = {
     exports: {}
   };
@@ -5285,8 +5068,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/throbber.js
-(typeof window === 'undefined' ? global : window).__09339e7cdcdecdedab4ce02aa86100f2 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/throbber.js
+(typeof window === 'undefined' ? global : window).__efbadfd39f308c3a3e14a83c069d73fd = (function () {
   var module = {
     exports: {}
   };
@@ -5306,8 +5089,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/edit-row.js
-(typeof window === 'undefined' ? global : window).__fa98b6b6842afadeca33f835f6fd852f = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/edit-row.js
+(typeof window === 'undefined' ? global : window).__6f6f93a6db384de956b5a3dcf20cd8cf = (function () {
   var module = {
     exports: {}
   };
@@ -5321,33 +5104,33 @@
   
   var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __a66ae57438a6301a66d32681106ab1de;
+  __19de5a4e8be2c6def66eba17e3819f1c;
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _classNames = __80eabeead1490f859f6a708858b1dc25;
+  var _classNames = __6cb6ba98d240ad8a464e632755835025;
   
   var _classNames2 = _interopRequireDefault(_classNames);
   
-  var _dataKeys = __40ea873dae0b909ba7e1b6d5b37fd259;
+  var _dataKeys = __92c78d58c645de42693045d4d3a79c1c;
   
   var _dataKeys2 = _interopRequireDefault(_dataKeys);
   
-  var _events = __b912ac75391ff799576d1dfdc1dc3c70;
+  var _events = __a8a27edcadbb3291524b9ea43b8af4ce;
   
   var _events2 = _interopRequireDefault(_events);
   
-  var _i18n = __fa714f1b12d7502957e4e0b6196321bf;
+  var _i18n = __ff21a71b857b101095156bf4ff8b27ac;
   
   var _i18n2 = _interopRequireDefault(_i18n);
   
-  var _throbber = __09339e7cdcdecdedab4ce02aa86100f2;
+  var _throbber = __efbadfd39f308c3a3e14a83c069d73fd;
   
   var _throbber2 = _interopRequireDefault(_throbber);
   
@@ -5822,8 +5605,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/entry-model.js
-(typeof window === 'undefined' ? global : window).__8050ba61a386ff790f31b0634ce1c858 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/entry-model.js
+(typeof window === 'undefined' ? global : window).__a957adf541e8046f4ec7d811fa0eec56 = (function () {
   var module = {
     exports: {}
   };
@@ -5837,21 +5620,21 @@
   
   var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _events = __f3ccb1e110c37fc6c95e5fa43d2c3f4f;
+  var _events = __bb9149f2450e3877631316cdb451280f;
   
-  var _underscore = __59c1c30030f41c99b6757d449d9a3a7b;
+  var _underscore = __17253d01a5dbb7811399698870024390;
   
   var _underscore2 = _interopRequireDefault(_underscore);
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _events2 = __b912ac75391ff799576d1dfdc1dc3c70;
+  var _events2 = __a8a27edcadbb3291524b9ea43b8af4ce;
   
   var _events3 = _interopRequireDefault(_events2);
   
@@ -5887,11 +5670,12 @@
       save: function save(attributes, options) {
           options = options || {};
   
-          var instance = this;
-          var Model;
-          var syncModel;
-          var error = options.error; // we override, so store original
-          var success = options.success;
+          var instance = this,
+              Model,
+              syncModel,
+              error = options.error,
+              // we override, so store original
+          success = options.success;
   
           // override error handler to provide some defaults
           options.error = function (model, xhr) {
@@ -5954,15 +5738,15 @@
       destroy: function destroy(options) {
           options = options || {};
   
-          var instance = this;
-          var url = this.url();
-          var data;
+          var instance = this,
+              url = this.url(),
+              data;
   
           if (options.data) {
               data = _jquery2.default.param(options.data);
           }
   
-          if (data && data.length) {
+          if (data !== '') {
               // we need to add to the url as the data param does not work for jQuery DELETE requests
               url = url + '?' + data;
           }
@@ -6074,8 +5858,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table/row.js
-(typeof window === 'undefined' ? global : window).__8ac1973494a53eee4a578e7b0d48a1b6 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table/row.js
+(typeof window === 'undefined' ? global : window).__12a7ed474d5246bbe7870b97be386295 = (function () {
   var module = {
     exports: {}
   };
@@ -6087,35 +5871,35 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _dialog = __bc50e12d2af94e34822ae0035ae0e67f;
+  var _dialog = __8c25237a63a4b0e116ea899da18a16d3;
   
   var dialog = _interopRequireWildcard(_dialog);
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _classNames = __80eabeead1490f859f6a708858b1dc25;
+  var _classNames = __6cb6ba98d240ad8a464e632755835025;
   
   var _classNames2 = _interopRequireDefault(_classNames);
   
-  var _dataKeys = __40ea873dae0b909ba7e1b6d5b37fd259;
+  var _dataKeys = __92c78d58c645de42693045d4d3a79c1c;
   
   var _dataKeys2 = _interopRequireDefault(_dataKeys);
   
-  var _events = __b912ac75391ff799576d1dfdc1dc3c70;
+  var _events = __a8a27edcadbb3291524b9ea43b8af4ce;
   
   var _events2 = _interopRequireDefault(_events);
   
-  var _i18n = __fa714f1b12d7502957e4e0b6196321bf;
+  var _i18n = __ff21a71b857b101095156bf4ff8b27ac;
   
   var _i18n2 = _interopRequireDefault(_i18n);
   
-  var _throbber = __09339e7cdcdecdedab4ce02aa86100f2;
+  var _throbber = __efbadfd39f308c3a3e14a83c069d73fd;
   
   var _throbber2 = _interopRequireDefault(_throbber);
   
@@ -6416,8 +6200,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/restful-table.js
-(typeof window === 'undefined' ? global : window).__9d6bbe6056be3ba99a06a04900676ca7 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/restful-table.js
+(typeof window === 'undefined' ? global : window).__c5e3bf15f76fa7bfc2443017a9e6dfb3 = (function () {
   var module = {
     exports: {}
   };
@@ -6429,63 +6213,63 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _log = __c1e961001275c079e48525ad3a48c8c2;
+  var _log = __8139e9a1368a0224fc430963d21930c8;
   
   var logger = _interopRequireWildcard(_log);
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _classNames = __80eabeead1490f859f6a708858b1dc25;
+  var _classNames = __6cb6ba98d240ad8a464e632755835025;
   
   var _classNames2 = _interopRequireDefault(_classNames);
   
-  var _customCreateView = __0d34270c41fe2d547efed0ce03f668c0;
+  var _customCreateView = __32dbabf183ece2a8f2812e96fdcf2494;
   
   var _customCreateView2 = _interopRequireDefault(_customCreateView);
   
-  var _customEditView = __15ac66f9a1559266d249b098cf180f35;
+  var _customEditView = __1c6e1281c2c05202a8e43057ade05a58;
   
   var _customEditView2 = _interopRequireDefault(_customEditView);
   
-  var _customReadView = __ce5d8a803e1fd58153b33f9bb2fe0bff;
+  var _customReadView = __5034e307049b45a668379b8f49ea940f;
   
   var _customReadView2 = _interopRequireDefault(_customReadView);
   
-  var _dataKeys = __40ea873dae0b909ba7e1b6d5b37fd259;
+  var _dataKeys = __92c78d58c645de42693045d4d3a79c1c;
   
   var _dataKeys2 = _interopRequireDefault(_dataKeys);
   
-  var _editRow = __fa98b6b6842afadeca33f835f6fd852f;
+  var _editRow = __6f6f93a6db384de956b5a3dcf20cd8cf;
   
   var _editRow2 = _interopRequireDefault(_editRow);
   
-  var _entryModel = __8050ba61a386ff790f31b0634ce1c858;
+  var _entryModel = __a957adf541e8046f4ec7d811fa0eec56;
   
   var _entryModel2 = _interopRequireDefault(_entryModel);
   
-  var _events = __b912ac75391ff799576d1dfdc1dc3c70;
+  var _events = __a8a27edcadbb3291524b9ea43b8af4ce;
   
   var _events2 = _interopRequireDefault(_events);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _i18n = __fa714f1b12d7502957e4e0b6196321bf;
+  var _i18n = __ff21a71b857b101095156bf4ff8b27ac;
   
   var _i18n2 = _interopRequireDefault(_i18n);
   
-  var _row = __8ac1973494a53eee4a578e7b0d48a1b6;
+  var _row = __12a7ed474d5246bbe7870b97be386295;
   
   var _row2 = _interopRequireDefault(_row);
   
-  var _throbber = __09339e7cdcdecdedab4ce02aa86100f2;
+  var _throbber = __efbadfd39f308c3a3e14a83c069d73fd;
   
   var _throbber2 = _interopRequireDefault(_throbber);
   
@@ -6824,7 +6608,7 @@
                       throw new Error('Cannot sort a set without a comparator');
                   }
                   this.tableRows = instance.getRows();
-                  this.models = this.sortBy(this.comparator, this);
+                  this.models = this.sortBy(this.comparator);
                   this.tableRows = undefined;
                   if (!options.silent) {
                       this.trigger('refresh', this, options);
@@ -6842,9 +6626,8 @@
           return new RowsAwareCollection([], {
               comparator: function comparator(row) {
                   // sort models in collection based on dom ordering
-                  var index;
-  
-                  var currentTableRows = this && this.tableRows !== undefined ? this.tableRows : instance.getRows();
+                  var index,
+                      currentTableRows = this.tableRows !== undefined ? this.tableRows : instance.getRows();
                   currentTableRows.some(function (item, i) {
                       if (item.model.id === row.id) {
                           index = i;
@@ -7075,12 +6858,14 @@
        * @return {Array}
        */
       getRows: function getRows() {
-          var instance = this;
-          var views = [];
+  
+          var instance = this,
+              views = [];
   
           this.$tbody.find('.' + this.classNames.READ_ONLY).each(function () {
-              var $row = (0, _jquery2.default)(this);
-              var view = $row.data(instance.dataKeys.ROW_VIEW);
+  
+              var $row = (0, _jquery2.default)(this),
+                  view = $row.data(instance.dataKeys.ROW_VIEW);
   
               if (view) {
                   views.push(view);
@@ -7099,10 +6884,11 @@
        * @return {jQuery}
        */
       _renderRow: function _renderRow(model, index) {
-          var instance = this;
-          var $rows = this.$tbody.find('.' + this.classNames.READ_ONLY);
-          var $row;
-          var view;
+  
+          var instance = this,
+              $rows = this.$tbody.find('.' + this.classNames.READ_ONLY),
+              $row,
+              view;
   
           view = new this._rowClass({
               model: model,
@@ -7404,8 +7190,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/result-set.js
-(typeof window === 'undefined' ? global : window).__b46ec20932fb7348b9b897055f211dc7 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/result-set.js
+(typeof window === 'undefined' ? global : window).__3253a94b3187c508715567de7b3d976c = (function () {
   var module = {
     exports: {}
   };
@@ -7417,11 +7203,11 @@
       value: true
   });
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
@@ -7478,8 +7264,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/results-list.js
-(typeof window === 'undefined' ? global : window).__93ae7363c623fd2012753bbaae65af05 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/results-list.js
+(typeof window === 'undefined' ? global : window).__c01675a5756b387d4597631183424a16 = (function () {
   var module = {
     exports: {}
   };
@@ -7491,19 +7277,19 @@
       value: true
   });
   
-  var _underscore = __59c1c30030f41c99b6757d449d9a3a7b;
+  var _underscore = __17253d01a5dbb7811399698870024390;
   
   var _underscore2 = _interopRequireDefault(_underscore);
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _resultSet = __b46ec20932fb7348b9b897055f211dc7;
+  var _resultSet = __3253a94b3187c508715567de7b3d976c;
   
   var _resultSet2 = _interopRequireDefault(_resultSet);
   
@@ -7586,8 +7372,516 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/spin.js
-(typeof window === 'undefined' ? global : window).__7662207c0e706b4f9b15584a7f7253f9 = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/spin/spin.js
+(typeof window === 'undefined' ? global : window).__b0bead4f53ba672725336d6e7298cf51 = (function () {
+  var module = {
+    exports: {}
+  };
+  var exports = module.exports;
+  var defineDependencies = {
+    "module": module,
+    "exports": exports
+  };
+  var define = function defineReplacementWrapper(generatedModuleName) {
+    return function defineReplacement(name, deps, func) {
+      var root = (typeof window === 'undefined' ? global : window);
+      var defineGlobal = root.define;
+      var rval;
+      var type;
+  
+      func = [func, deps, name].filter(function (cur) {
+        return typeof cur === 'function';
+      })[0];
+      deps = [deps, name, []].filter(Array.isArray)[0];
+      rval = func.apply(null, deps.map(function (value) {
+        return defineDependencies[value];
+      }));
+      type = typeof rval;
+  
+      // Support existing AMD libs.
+      if (typeof defineGlobal === 'function') {
+        // Almond always expects a name so resolve one (#29).
+        defineGlobal(typeof name === 'string' ? name : generatedModuleName, deps, func);
+      }
+  
+      // Some processors like Babel don't check to make sure that the module value
+      // is not a primitive before calling Object.defineProperty() on it. We ensure
+      // it is an instance so that it can.
+      if (type === 'string') {
+        rval = String(rval);
+      } else if (type === 'number') {
+        rval = Number(rval);
+      } else if (type === 'boolean') {
+        rval = Boolean(rval);
+      }
+  
+      // Reset the exports to the defined module. This is how we convert AMD to
+      // CommonJS and ensures both can either co-exist, or be used separately. We
+      // only set it if it is not defined because there is no object representation
+      // of undefined, thus calling Object.defineProperty() on it would fail.
+      if (rval !== undefined) {
+        exports = module.exports = rval;
+      }
+    };
+  }("__b0bead4f53ba672725336d6e7298cf51");
+  define.amd = true;
+  
+  //fgnass.github.com/spin.js#v1.3.3
+  /*
+      Modified by Atlassian
+   */
+  
+  /**
+   * Copyright (c) 2011-2013 Felix Gnass
+   * Licensed under the MIT license
+   */
+  (function(root, factory) {
+  
+    /* CommonJS */
+    if (typeof exports == 'object')  module.exports = factory()
+  
+    /* AMD module */
+    // ATLASSIAN - don't check define.amd for products who deleted it.
+    else if (typeof define == 'function') define('aui/internal/spin', factory)
+  
+    /* Browser global */
+    // ATLASSIAN - always expose Spinner globally
+    root.Spinner = factory()
+  }
+  (this, function() {
+  
+    var prefixes = ['webkit', 'Moz', 'ms', 'O'] /* Vendor prefixes */
+      , animations = {} /* Animation rules keyed by their name */
+      , useCssAnimations /* Whether to use CSS animations or setTimeout */
+  
+    /**
+     * Utility function to create elements. If no tag name is given,
+     * a DIV is created. Optionally properties can be passed.
+     */
+    function createEl(tag, prop) {
+      var el = document.createElement(tag || 'div')
+        , n
+  
+      for(n in prop) el[n] = prop[n]
+      return el
+    }
+  
+    /**
+     * Appends children and returns the parent.
+     */
+    function ins(parent /* child1, child2, ...*/) {
+      for (var i=1, n=arguments.length; i<n; i++)
+        parent.appendChild(arguments[i])
+  
+      return parent
+    }
+  
+    /**
+     * Insert a new stylesheet to hold the @keyframe or VML rules.
+     */
+    var sheet = (function() {
+      var el = createEl('style', {type : 'text/css'})
+      ins(document.getElementsByTagName('head')[0], el)
+      return el.sheet || el.styleSheet
+    }())
+  
+    /**
+     * Creates an opacity keyframe animation rule and returns its name.
+     * Since most mobile Webkits have timing issues with animation-delay,
+     * we create separate rules for each line/segment.
+     */
+    function addAnimation(alpha, trail, i, lines) {
+      var name = ['opacity', trail, ~~(alpha*100), i, lines].join('-')
+        , start = 0.01 + i/lines * 100
+        , z = Math.max(1 - (1-alpha) / trail * (100-start), alpha)
+        , prefix = useCssAnimations.substring(0, useCssAnimations.indexOf('Animation')).toLowerCase()
+        , pre = prefix && '-' + prefix + '-' || ''
+  
+      if (!animations[name]) {
+        sheet.insertRule(
+          '@' + pre + 'keyframes ' + name + '{' +
+          '0%{opacity:' + z + '}' +
+          start + '%{opacity:' + alpha + '}' +
+          (start+0.01) + '%{opacity:1}' +
+          (start+trail) % 100 + '%{opacity:' + alpha + '}' +
+          '100%{opacity:' + z + '}' +
+          '}', sheet.cssRules.length)
+  
+        animations[name] = 1
+      }
+  
+      return name
+    }
+  
+    /**
+     * Tries various vendor prefixes and returns the first supported property.
+     */
+    function vendor(el, prop) {
+      var s = el.style
+        , pp
+        , i
+  
+      prop = prop.charAt(0).toUpperCase() + prop.slice(1)
+      for(i=0; i<prefixes.length; i++) {
+        pp = prefixes[i]+prop
+        if(s[pp] !== undefined) return pp
+      }
+      if(s[prop] !== undefined) return prop
+    }
+  
+    /**
+     * Sets multiple style properties at once.
+     */
+    function css(el, prop) {
+      for (var n in prop)
+        el.style[vendor(el, n)||n] = prop[n]
+  
+      return el
+    }
+  
+    /**
+     * Fills in default values.
+     */
+    function merge(obj) {
+      for (var i=1; i < arguments.length; i++) {
+        var def = arguments[i]
+        for (var n in def)
+          if (obj[n] === undefined) obj[n] = def[n]
+      }
+      return obj
+    }
+  
+    /**
+     * Returns the absolute page-offset of the given element.
+     */
+    function pos(el) {
+      var o = { x:el.offsetLeft, y:el.offsetTop }
+      while((el = el.offsetParent))
+        // ATLASSIAN - AUI-3542 - add border width to the calculation of o.x and o.y
+        o.x+=el.offsetLeft+el.clientLeft, o.y+=el.offsetTop+el.clientTop
+  
+      return o
+    }
+  
+    /**
+     * Returns the line color from the given string or array.
+     */
+    function getColor(color, idx) {
+      return typeof color == 'string' ? color : color[idx % color.length]
+    }
+  
+    // Built-in defaults
+  
+    var defaults = {
+      lines: 12,            // The number of lines to draw
+      length: 7,            // The length of each line
+      width: 5,             // The line thickness
+      radius: 10,           // The radius of the inner circle
+      rotate: 0,            // Rotation offset
+      corners: 1,           // Roundness (0..1)
+      color: '#000',        // #rgb or #rrggbb
+      direction: 1,         // 1: clockwise, -1: counterclockwise
+      speed: 1,             // Rounds per second
+      trail: 100,           // Afterglow percentage
+      opacity: 1/4,         // Opacity of the lines
+      fps: 20,              // Frames per second when using setTimeout()
+      zIndex: 2e9,          // Use a high z-index by default
+      className: 'spinner', // CSS class to assign to the element
+      top: 'auto',          // center vertically
+      left: 'auto',         // center horizontally
+      position: 'relative'  // element position
+    }
+  
+    /** The constructor */
+    function Spinner(o) {
+      if (typeof this == 'undefined') return new Spinner(o)
+      this.opts = merge(o || {}, Spinner.defaults, defaults)
+    }
+  
+    // Global defaults that override the built-ins:
+    Spinner.defaults = {}
+  
+    merge(Spinner.prototype, {
+  
+      /**
+       * Adds the spinner to the given target element. If this instance is already
+       * spinning, it is automatically removed from its previous target b calling
+       * stop() internally.
+       */
+      spin: function(target) {
+        this.stop()
+  
+        var self = this
+          , o = self.opts
+          , el = self.el = css(createEl(0, {className: o.className}), {position: o.position, width: 0, zIndex: o.zIndex})
+          , mid = o.radius+o.length+o.width
+          , ep // element position
+          , tp // target position
+  
+        if (target) {
+          target.insertBefore(el, target.firstChild||null)
+          tp = pos(target)
+          ep = pos(el)
+          css(el, {
+            left: (o.left == 'auto' ? tp.x-ep.x + (target.offsetWidth >> 1) : parseInt(o.left, 10) + mid) + 'px',
+            top: (o.top == 'auto' ? tp.y-ep.y + (target.offsetHeight >> 1) : parseInt(o.top, 10) + mid)  + 'px'
+          })
+        }
+  
+        el.setAttribute('role', 'progressbar')
+        self.lines(el, self.opts)
+  
+        if (!useCssAnimations) {
+          // No CSS animation support, use setTimeout() instead
+          var i = 0
+            , start = (o.lines - 1) * (1 - o.direction) / 2
+            , alpha
+            , fps = o.fps
+            , f = fps/o.speed
+            , ostep = (1-o.opacity) / (f*o.trail / 100)
+            , astep = f/o.lines
+  
+          ;(function anim() {
+            i++;
+            for (var j = 0; j < o.lines; j++) {
+              alpha = Math.max(1 - (i + (o.lines - j) * astep) % f * ostep, o.opacity)
+  
+              self.opacity(el, j * o.direction + start, alpha, o)
+            }
+            self.timeout = self.el && setTimeout(anim, ~~(1000/fps))
+          })()
+        }
+        return self
+      },
+  
+      /**
+       * Stops and removes the Spinner.
+       */
+      stop: function() {
+        var el = this.el
+        if (el) {
+          clearTimeout(this.timeout)
+          if (el.parentNode) el.parentNode.removeChild(el)
+          this.el = undefined
+        }
+        return this
+      },
+  
+      /**
+       * Internal method that draws the individual lines. Will be overwritten
+       * in VML fallback mode below.
+       */
+      lines: function(el, o) {
+        var i = 0
+          , start = (o.lines - 1) * (1 - o.direction) / 2
+          , seg
+  
+        function fill(color, shadow) {
+          return css(createEl(), {
+            position: 'absolute',
+            width: (o.length+o.width) + 'px',
+            height: o.width + 'px',
+            background: color,
+            boxShadow: shadow,
+            transformOrigin: 'left',
+            transform: 'rotate(' + ~~(360/o.lines*i+o.rotate) + 'deg) translate(' + o.radius+'px' +',0)',
+            borderRadius: (o.corners * o.width>>1) + 'px'
+          })
+        }
+  
+        for (; i < o.lines; i++) {
+          seg = css(createEl(), {
+            position: 'absolute',
+            top: 1+~(o.width/2) + 'px',
+            transform: o.hwaccel ? 'translate3d(0,0,0)' : '',
+            opacity: o.opacity,
+            animation: useCssAnimations && addAnimation(o.opacity, o.trail, start + i * o.direction, o.lines) + ' ' + 1/o.speed + 's linear infinite'
+          })
+  
+          if (o.shadow) ins(seg, css(fill('#000', '0 0 4px ' + '#000'), {top: 2+'px'}))
+          ins(el, ins(seg, fill(getColor(o.color, i), '0 0 1px rgba(0,0,0,.1)')))
+        }
+        return el
+      },
+  
+      /**
+       * Internal method that adjusts the opacity of a single line.
+       * Will be overwritten in VML fallback mode below.
+       */
+      opacity: function(el, i, val) {
+        if (i < el.childNodes.length) el.childNodes[i].style.opacity = val
+      }
+  
+    })
+  
+  
+    function initVML() {
+  
+      /* Utility function to create a VML tag */
+      function vml(tag, attr) {
+        return createEl('<' + tag + ' xmlns="urn:schemas-microsoft.com:vml" class="spin-vml">', attr)
+      }
+  
+      // No CSS transforms but VML support, add a CSS rule for VML elements:
+      sheet.addRule('.spin-vml', 'behavior:url(#default#VML)')
+  
+      Spinner.prototype.lines = function(el, o) {
+        var r = o.length+o.width
+          , s = 2*r
+  
+        function grp() {
+          return css(
+            vml('group', {
+              coordsize: s + ' ' + s,
+              coordorigin: -r + ' ' + -r
+            }),
+            { width: s, height: s }
+          )
+        }
+  
+        var margin = -(o.width+o.length)*2 + 'px'
+          , g = css(grp(), {position: 'absolute', top: margin, left: margin})
+          , i
+  
+        function seg(i, dx, filter) {
+          ins(g,
+            ins(css(grp(), {rotation: 360 / o.lines * i + 'deg', left: ~~dx}),
+              ins(css(vml('roundrect', {arcsize: o.corners}), {
+                  width: r,
+                  height: o.width,
+                  left: o.radius,
+                  top: -o.width>>1,
+                  filter: filter
+                }),
+                vml('fill', {color: getColor(o.color, i), opacity: o.opacity}),
+                vml('stroke', {opacity: 0}) // transparent stroke to fix color bleeding upon opacity change
+              )
+            )
+          )
+        }
+  
+        if (o.shadow)
+          for (i = 1; i <= o.lines; i++)
+            seg(i, -2, 'progid:DXImageTransform.Microsoft.Blur(pixelradius=2,makeshadow=1,shadowopacity=.3)')
+  
+        for (i = 1; i <= o.lines; i++) seg(i)
+        return ins(el, g)
+      }
+  
+      Spinner.prototype.opacity = function(el, i, val, o) {
+        var c = el.firstChild
+        o = o.shadow && o.lines || 0
+        if (c && i+o < c.childNodes.length) {
+          c = c.childNodes[i+o]; c = c && c.firstChild; c = c && c.firstChild
+          if (c) c.opacity = val
+        }
+      }
+    }
+  
+    var probe = css(createEl('group'), {behavior: 'url(#default#VML)'})
+  
+    if (!vendor(probe, 'transform') && probe.adj) initVML()
+    else useCssAnimations = vendor(probe, 'animation')
+  
+    return Spinner
+  
+  }));
+  
+  
+  return module.exports;
+}).call(this);
+// node_modules/@atlassian/aui/src/js-vendor/jquery/jquery.spin.js
+(typeof window === 'undefined' ? global : window).__d8ff3af7054b670547578cbb83ac113e = (function () {
+  var module = {
+    exports: {}
+  };
+  var exports = module.exports;
+  
+  /*
+   * Ideas from https://gist.github.com/its-florida/1290439 are acknowledged and used here.
+   * Resulting file is heavily modified from that gist so is licensed under AUI's license.
+   *
+   * You can now create a spinner using any of the variants below:
+   *
+   * $("#el").spin(); // Produces default Spinner using the text color of #el.
+   * $("#el").spin("small"); // Produces a 'small' Spinner using the text color of #el.
+   * $("#el").spin("large", { ... }); // Produces a 'large' Spinner with your custom settings.
+   * $("#el").spin({ ... }); // Produces a Spinner using your custom settings.
+   *
+   * $("#el").spin(false); // Kills the spinner.
+   * $("#el").spinStop(); // Also kills the spinner.
+   *
+   */
+  (function($) {
+      $.fn.spin = function(optsOrPreset, opts) {
+          var preset, options;
+  
+          if (typeof optsOrPreset === 'string') {
+              if (! optsOrPreset in $.fn.spin.presets) {
+                  throw new Error("Preset '" + optsOrPreset + "' isn't defined");
+              }
+              preset = $.fn.spin.presets[optsOrPreset];
+              options = opts || {};
+          } else {
+              if (opts) {
+                  throw new Error('Invalid arguments. Accepted arguments:\n' +
+                      '$.spin([String preset[, Object options]]),\n' +
+                      '$.spin(Object options),\n' +
+                      '$.spin(Boolean shouldSpin)');
+              }
+              preset = $.fn.spin.presets.small;
+              options = $.isPlainObject(optsOrPreset) ? optsOrPreset : {};
+          }
+  
+          if (window.Spinner) {
+              return this.each(function() {
+                  var $this = $(this),
+                      data = $this.data();
+  
+                  if (data.spinner) {
+                      data.spinner.stop();
+                      delete data.spinner;
+                  }
+  
+                  if (optsOrPreset === false) { // just stop it spinning.
+                      return;
+                  }
+  
+                  options = $.extend({ color: $this.css('color') }, preset, options);
+                  data.spinner = new Spinner(options).spin(this);
+              });
+          } else {
+              throw "Spinner class not available.";
+          }
+      };
+      $.fn.spin.presets = {
+          "small": { lines: 12, length: 3, width: 2, radius: 3, trail: 60, speed: 1.5 },
+          "medium": { lines: 12, length: 5, width: 3, radius: 8, trail: 60, speed: 1.5 },
+          "large": { lines: 12, length: 8, width: 4, radius: 10, trail: 60, speed: 1.5 }
+      };
+  
+      $.fn.spinStop = function() {
+          if (window.Spinner) {
+              return this.each(function() {
+                  var $this = $(this),
+                      data = $this.data();
+  
+                  if (data.spinner) {
+                      data.spinner.stop();
+                      delete data.spinner;
+                  }
+  
+              });
+          } else {
+              throw "Spinner class not available.";
+          }
+      };
+  })(jQuery);
+  
+  return module.exports;
+}).call(this);
+// node_modules/@atlassian/aui/src/js/aui/spin.js
+(typeof window === 'undefined' ? global : window).__e0a09f3ee5af5c6a891a000b0e664556 = (function () {
   var module = {
     exports: {}
   };
@@ -7595,101 +7889,14 @@
   
   'use strict';
   
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+  __b0bead4f53ba672725336d6e7298cf51;
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
-  
-  var _jquery2 = _interopRequireDefault(_jquery);
-  
-  __6c1bd26c14066cf537a86a0966c2d4fc;
-  
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
-  
-  var _skate2 = _interopRequireDefault(_skate);
-  
-  var _deprecation = __921ad9514d56376fef992861d9ec0f51;
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  /**
-   * @typedef {Object} jQuerySpinnerConfig
-   * @property {SpinnerSize} size - the size of the spinner.
-   */
-  
-  /**
-   * @param {jQuerySpinnerConfig|String|Boolean} [firstArgs]
-   * - when an object, it is a {jQuerySpinnerConfig}
-   * - when a string, it represents the `size` the spinner should take.
-   * - when boolean, the argument can take only FALSE, in this case, the spinner will be stopped.
-   * @param {jQuerySpinnerConfig} [maybeArgs]
-   * @deprecated since AUI 7.9.4. Use the `<aui-spinner>` web component directly.
-   */
-  _jquery2.default.fn.spin = (0, _deprecation.fn)(function spinStart(firstArgs, maybeArgs) {
-      var args = { size: 'small' };
-      if ((typeof maybeArgs === 'undefined' ? 'undefined' : _typeof(maybeArgs)) === 'object') {
-          args = _jquery2.default.extend(args, maybeArgs);
-      }
-      if ((typeof firstArgs === 'undefined' ? 'undefined' : _typeof(firstArgs)) === 'object') {
-          args = _jquery2.default.extend(args, firstArgs);
-      }
-      if (typeof firstArgs === 'string') {
-          args.size = firstArgs;
-      }
-      if (typeof firstArgs === 'boolean' && firstArgs === false) {
-          return this.spinStop();
-      }
-  
-      return this.each(function () {
-          if (!this || !this.nodeType) {
-              return;
-          }
-          var $this = (0, _jquery2.default)(this);
-          var data = $this.data();
-          if (data) {
-              var $spinnerDom = (0, _jquery2.default)('<aui-spinner filled></aui-spinner>');
-              $spinnerDom.attr('size', args.size); // the web component handles validation
-              $spinnerDom.css('color', args.color);
-  
-              $this.spinStop();
-              $this.append($spinnerDom);
-              // AUI-4819 - ensure web component is initialised synchronously.
-              _skate2.default.init(this);
-  
-              data.spinner = $spinnerDom;
-          }
-      });
-  }, 'jQuery.fn.spin', {
-      sinceVersion: '7.9.4',
-      removeInVersion: '9',
-      alternativeName: '<aui-spinner>'
-  });
-  
-  /**
-   * @deprecated since AUI 7.9.4. Use the `<aui-spinner>` web component directly.
-   */
-  _jquery2.default.fn.spinStop = (0, _deprecation.fn)(function spinStop() {
-      return this.each(function () {
-          if (!this || !this.nodeType) {
-              return;
-          }
-          var $this = (0, _jquery2.default)(this);
-          var data = $this.data();
-          if (data && data.spinner) {
-              data.spinner.remove();
-  
-              delete data.spinner;
-          }
-      });
-  }, 'jQuery.fn.spinStop', {
-      sinceVersion: '7.9.4',
-      removeInVersion: '9',
-      alternativeName: '<aui-spinner>'
-  });
+  __d8ff3af7054b670547578cbb83ac113e;
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/select/option.js
-(typeof window === 'undefined' ? global : window).__fe251e1f4080cfe4e163e9b243bb0491 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/select/option.js
+(typeof window === 'undefined' ? global : window).__66873f486bab0e75e472d0d0bcf053d7 = (function () {
   var module = {
     exports: {}
   };
@@ -7701,11 +7908,11 @@
       value: true
   });
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _escapeHtml = __48697fd7ae587e40e44fef53ab10460c;
+  var _escapeHtml = __9429d2be869371d3ad2b23dcd7686108;
   
   var _escapeHtml2 = _interopRequireDefault(_escapeHtml);
   
@@ -7739,8 +7946,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/select/suggestion-model.js
-(typeof window === 'undefined' ? global : window).__3612acbfe60f9cd2a88e38733670f664 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/select/suggestion-model.js
+(typeof window === 'undefined' ? global : window).__4a26aa2a39d925726ccc2b585adc0d7d = (function () {
   var module = {
     exports: {}
   };
@@ -7752,7 +7959,7 @@
       value: true
   });
   
-  var _backbone = __320e4ec293ac29d49b959aa9d46df68f;
+  var _backbone = __a0f8accf3e15b29165e7a143e435af91;
   
   var _backbone2 = _interopRequireDefault(_backbone);
   
@@ -7768,8 +7975,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/select/suggestions-model.js
-(typeof window === 'undefined' ? global : window).__b227fe541363e13797e40f0e86a3a5b6 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/select/suggestions-model.js
+(typeof window === 'undefined' ? global : window).__771c421e3b16ab7d7c1aebed0c4d3565 = (function () {
   var module = {
     exports: {}
   };
@@ -7851,8 +8058,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/select/suggestions-view.js
-(typeof window === 'undefined' ? global : window).__9e2e7d5836591eb38f141c77fb1c9982 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/select/suggestions-view.js
+(typeof window === 'undefined' ? global : window).__9140d8f8d637e720a6ac5d96e732ad03 = (function () {
   var module = {
     exports: {}
   };
@@ -7864,17 +8071,17 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __fa714f1b12d7502957e4e0b6196321bf;
+  __ff21a71b857b101095156bf4ff8b27ac;
   
-  var _alignment = __81deba69899d0f1851f2c511b87bbbae;
+  var _alignment = __670509c3f39577904eaf81675f28b1a5;
   
   var _alignment2 = _interopRequireDefault(_alignment);
   
-  var _layer = __3ada4a8272640e5242be87f12c7e0fdf;
+  var _layer = __b16464bbf0aa314bacb753553ada098e;
   
   var _layer2 = _interopRequireDefault(_layer);
   
@@ -7973,8 +8180,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/select/template.js
-(typeof window === 'undefined' ? global : window).__7865c6da767e205eeac86fc044ce472b = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/select/template.js
+(typeof window === 'undefined' ? global : window).__8f881de1614be8062f6a161bbb68468e = (function () {
   var module = {
     exports: {}
   };
@@ -7986,7 +8193,7 @@
       value: true
   });
   
-  var _skatejsTemplateHtml = __c6b5725916d210b9653318d2ea2472cb;
+  var _skatejsTemplateHtml = __19c740e7a69d815ecec16b8dd69f0e00;
   
   var _skatejsTemplateHtml2 = _interopRequireDefault(_skatejsTemplateHtml);
   
@@ -7997,8 +8204,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/select.js
-(typeof window === 'undefined' ? global : window).__67239d8727b67748b2105d3faf199585 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/select.js
+(typeof window === 'undefined' ? global : window).__fa8e9894e9fa2d4a0a3f4a619cdac6dc = (function () {
   var module = {
     exports: {}
   };
@@ -8010,69 +8217,69 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __eaacbdad8b92ceca9114dc3be870abe7;
+  __ba22a6a0f9889bb04a6764c4bc4865a0;
   
-  __fa714f1b12d7502957e4e0b6196321bf;
+  __ff21a71b857b101095156bf4ff8b27ac;
   
-  __7662207c0e706b4f9b15584a7f7253f9;
+  __e0a09f3ee5af5c6a891a000b0e664556;
   
-  var _option = __fe251e1f4080cfe4e163e9b243bb0491;
+  var _option = __66873f486bab0e75e472d0d0bcf053d7;
   
   var _option2 = _interopRequireDefault(_option);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _customEvent = __f7a5e0d2ea8865b104efc9b94861591e;
+  var _customEvent = __2e94b36d616dffee0a6f911bf22a83ae;
   
   var _customEvent2 = _interopRequireDefault(_customEvent);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _keyCode = __e246bf93af36eb4453f35afeb1c302d9;
+  var _keyCode = __d92d89c196b4703777e79d25a9f94b7f;
   
   var _keyCode2 = _interopRequireDefault(_keyCode);
   
-  var _progressiveDataSet = __4f7eb6cf60845d0cd685bf4d782df3ea;
+  var _progressiveDataSet = __f1c85bac91549fc7b83aaa27ba2694e9;
   
   var _progressiveDataSet2 = _interopRequireDefault(_progressiveDataSet);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _state = __3f2c7809aecfe899611b77461a9218ac;
+  var _state = __ed9b9aac7079f8ce29349f1a2c1b9701;
   
   var _state2 = _interopRequireDefault(_state);
   
-  var _suggestionModel = __3612acbfe60f9cd2a88e38733670f664;
+  var _suggestionModel = __4a26aa2a39d925726ccc2b585adc0d7d;
   
   var _suggestionModel2 = _interopRequireDefault(_suggestionModel);
   
-  var _suggestionsModel = __b227fe541363e13797e40f0e86a3a5b6;
+  var _suggestionsModel = __771c421e3b16ab7d7c1aebed0c4d3565;
   
   var _suggestionsModel2 = _interopRequireDefault(_suggestionsModel);
   
-  var _suggestionsView = __9e2e7d5836591eb38f141c77fb1c9982;
+  var _suggestionsView = __9140d8f8d637e720a6ac5d96e732ad03;
   
   var _suggestionsView2 = _interopRequireDefault(_suggestionsView);
   
-  var _template = __7865c6da767e205eeac86fc044ce472b;
+  var _template = __8f881de1614be8062f6a161bbb68468e;
   
   var _template2 = _interopRequireDefault(_template);
   
-  var _uniqueId = __a0ab588de7b0759818853425dc8ad2f2;
+  var _uniqueId = __327dbe0b6617f3273ea9b3fc2d1dda83;
   
   var _uniqueId2 = _interopRequireDefault(_uniqueId);
   
-  var _constants = __584af8690b0248d0ffcba682ccaa70ba;
+  var _constants = __b2cfc977d45980ce4c29f90ea86d5180;
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -8501,18 +8708,13 @@
               if (data.get('prevent-open-on-button-click')) {
                   data.set('prevent-open-on-button-click', false);
               } else {
-                  (0, _state2.default)(element).set('button-clicked-prevent-dropdown-hide', true);
                   element.focus();
               }
           },
   
           input: function input(element) {
               if (!element._input.value) {
-                  if ((0, _state2.default)(element).get('button-clicked-prevent-dropdown-hide')) {
-                      (0, _state2.default)(element).set('button-clicked-prevent-dropdown-hide', false);
-                  } else {
-                      hideDropdown(element);
-                  }
+                  hideDropdown(element);
               } else {
                   (0, _state2.default)(element).set('should-include-selected', true);
                   suggest(element, true);
@@ -8612,8 +8814,8 @@
   
   return module.exports;
 }).call(this);
-// src/js-vendor/jquery/plugins/jquery.select2.js
-(typeof window === 'undefined' ? global : window).__63e2d0d906dfc9cc19eb6e8389c4f5a3 = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/jquery/plugins/jquery.select2.js
+(typeof window === 'undefined' ? global : window).__541108ffa7d92ccfa7bbf8536d20dbb0 = (function () {
   var module = {
     exports: {}
   };
@@ -11878,8 +12080,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/select2.js
-(typeof window === 'undefined' ? global : window).__7dc2a1c33ff678de05f5aa1a9414d108 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/select2.js
+(typeof window === 'undefined' ? global : window).__0d8267f32c62ec811936d03ae0ef7267 = (function () {
   var module = {
     exports: {}
   };
@@ -11887,11 +12089,11 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __63e2d0d906dfc9cc19eb6e8389c4f5a3;
+  __541108ffa7d92ccfa7bbf8536d20dbb0;
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -11938,8 +12140,8 @@
   
   return module.exports;
 }).call(this);
-// src/js-vendor/raf/raf.js
-(typeof window === 'undefined' ? global : window).__bf59f74063d342eb3fddf114cbed6239 = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/raf/raf.js
+(typeof window === 'undefined' ? global : window).__5ca5c5ddaacf5652a879cfec07ca5db7 = (function () {
   var module = {
     exports: {}
   };
@@ -11989,8 +12191,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/has-touch.js
-(typeof window === 'undefined' ? global : window).__6c4fb3940d6fd500a61aec90cc3f93dc = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/has-touch.js
+(typeof window === 'undefined' ? global : window).__2d5f094064a34a526c3e143503c89b91 = (function () {
   var module = {
     exports: {}
   };
@@ -12008,8 +12210,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/is-input.js
-(typeof window === 'undefined' ? global : window).__dff830f45baf5eb0b8447c97bbcc4699 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/is-input.js
+(typeof window === 'undefined' ? global : window).__bd483f5e8ad6ed1962e7a119675a0b66 = (function () {
   var module = {
     exports: {}
   };
@@ -12029,8 +12231,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/internal/mediaQuery.js
-(typeof window === 'undefined' ? global : window).__682859fc5d8be5d41dbacb89678092a4 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/internal/mediaQuery.js
+(typeof window === 'undefined' ? global : window).__233c61f178d7afeb305a2369d3ca4c77 = (function () {
   var module = {
     exports: {}
   };
@@ -12065,8 +12267,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/sidebar.js
-(typeof window === 'undefined' ? global : window).__794d61e50f5e0ebf599ea9f132cd243e = (function () {
+// node_modules/@atlassian/aui/src/js/aui/sidebar.js
+(typeof window === 'undefined' ? global : window).__35ff1875ff47a73afe1c7cfa63c3b7f7 = (function () {
   var module = {
     exports: {}
   };
@@ -12078,53 +12280,53 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __8c05d85e3d7fb791ad5071fea16ddb09;
+  __cc64a0d7c308ad5954e00f06c2bcc6ed;
   
-  __bf59f74063d342eb3fddf114cbed6239;
+  __5ca5c5ddaacf5652a879cfec07ca5db7;
   
-  __fa714f1b12d7502957e4e0b6196321bf;
+  __ff21a71b857b101095156bf4ff8b27ac;
   
-  var _clone = __e7d0e8462b4386c30e9bcd3ad0a49ad3;
+  var _clone = __8a777f37cbfa8f7456cf8bf6fd300c3f;
   
   var _clone2 = _interopRequireDefault(_clone);
   
-  var _deprecation = __921ad9514d56376fef992861d9ec0f51;
+  var _deprecation = __9ea35e3451360b72ebe8cb8006239936;
   
   var deprecate = _interopRequireWildcard(_deprecation);
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _hasTouch = __6c4fb3940d6fd500a61aec90cc3f93dc;
+  var _hasTouch = __2d5f094064a34a526c3e143503c89b91;
   
   var _hasTouch2 = _interopRequireDefault(_hasTouch);
   
-  var _isInput = __dff830f45baf5eb0b8447c97bbcc4699;
+  var _isInput = __bd483f5e8ad6ed1962e7a119675a0b66;
   
   var _isInput2 = _interopRequireDefault(_isInput);
   
-  var _keyCode = __e246bf93af36eb4453f35afeb1c302d9;
+  var _keyCode = __d92d89c196b4703777e79d25a9f94b7f;
   
   var _keyCode2 = _interopRequireDefault(_keyCode);
   
-  var _mediaQuery = __682859fc5d8be5d41dbacb89678092a4;
+  var _mediaQuery = __233c61f178d7afeb305a2369d3ca4c77;
   
   var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _uniqueId = __a0ab588de7b0759818853425dc8ad2f2;
+  var _uniqueId = __327dbe0b6617f3273ea9b3fc2d1dda83;
   
   var _uniqueId2 = _interopRequireDefault(_uniqueId);
   
-  var _widget = __d2e8fc66dac2ecebdc205fcab991f687;
+  var _widget = __ecaadce486e7be7002d8453fc51f9873;
   
   var _widget2 = _interopRequireDefault(_widget);
   
@@ -12193,25 +12395,9 @@
       return this;
   };
   
-  Sidebar.prototype.setTopPosition = function () {
-      var scrollTop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window.pageYOffset;
-  
+  Sidebar.prototype.setPosition = function (scrollTop) {
+      scrollTop = scrollTop || window.pageYOffset;
       this.$wrapper.toggleClass('aui-is-docked', scrollTop > sidebarOffset(this.$el));
-      return this;
-  };
-  
-  Sidebar.prototype.setPosition = deprecate.fn(Sidebar.prototype.setTopPosition, 'Sidebar.setPosition', {
-      removeInVersion: '8.0.0',
-      sinceVersion: '7.6.1',
-      alternativeName: 'Sidebar.setTopPosition'
-  });
-  
-  Sidebar.prototype.setLeftPosition = function () {
-      var scrollLeft = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window.pageXOffset;
-  
-      if (this.$wrapper.hasClass('aui-is-docked')) {
-          this.$wrapper.css({ left: -scrollLeft });
-      }
       return this;
   };
   
@@ -12350,13 +12536,11 @@
       }
   };
   
-  Sidebar.prototype.reflow = function reflow() {
-      var scrollTop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window.pageYOffset;
-      var viewportHeight = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document.documentElement.clientHeight;
-      var viewportWidth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window.innerWidth;
-      var scrollHeight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : document.documentElement.scrollHeight;
-      var scrollLeft = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : window.pageXOffset;
-  
+  Sidebar.prototype.reflow = function reflow(scrollTop, viewportHeight, viewportWidth, scrollHeight) {
+      scrollTop = scrollTop === undefined ? window.pageYOffset : scrollTop;
+      viewportHeight = viewportHeight === undefined ? document.documentElement.clientHeight : viewportHeight;
+      scrollHeight = scrollHeight === undefined ? document.documentElement.scrollHeight : scrollHeight;
+      viewportWidth = viewportWidth === undefined ? window.innerWidth : viewportWidth;
   
       // Header height needs to be checked because in Stash it changes when the CSS "transform: translate3d" is changed.
       // If you called reflow() after this change then nothing happened because the scrollTop and viewportHeight hadn't changed.
@@ -12374,12 +12558,8 @@
           var isTrackpadBounce = scrollTop !== this._previousScrollTop && (scrollTop < 0 || scrollTop + viewportHeight > scrollHeight);
           if (!isTouch && (isInitialPageLoad || !isTrackpadBounce)) {
               this.setHeight(scrollTop, viewportHeight, offsetTop);
-              this.setTopPosition(scrollTop);
+              this.setPosition(scrollTop);
           }
-      }
-  
-      if (scrollLeft !== this._previousScrollLeft) {
-          this.setLeftPosition(scrollLeft);
       }
   
       var isResponsive = this.$el.attr('data-aui-responsive') !== 'false';
@@ -12394,7 +12574,6 @@
       this._previousViewportHeight = viewportHeight;
       this._previousViewportWidth = viewportWidth;
       this._previousOffsetTop = offsetTop;
-      this._previousScrollLeft = scrollLeft;
       return this;
   };
   
@@ -12651,14 +12830,11 @@
               // "In the case where a transition is removed before completion,
               // such as if the transition-property is removed, then the event will not fire."
               setTimeout(function () {
-                  if ($tip.hasClass('tooltip-shown')) {
-                      $trigger.tipsy('hide');
-                      $tip.removeClass('tooltip-shown');
-                  }
+                  $trigger.tipsy('hide');
               }, timeoutMs);
-          } else {
-              $tip.removeClass('tooltip-shown');
           }
+  
+          $tip.removeClass('tooltip-shown');
       }
   }
   
@@ -12693,7 +12869,7 @@
       };
   
       (0, _jquery2.default)(window).on('scroll resize', onScrollResizeReflow);
-      onScrollResizeReflow();
+      sidebar.reflow();
   
       if (sidebar.isAnimated()) {
           sidebar.$el.on('transitionend webkitTransitionEnd', function () {
@@ -12853,8 +13029,8 @@
   
   return module.exports;
 }).call(this);
-// src/js-vendor/jquery/jquery.tablesorter.js
-(typeof window === 'undefined' ? global : window).__bcb3bf48343222097ceddcaac01ec182 = (function () {
+// node_modules/@atlassian/aui/src/js-vendor/jquery/jquery.tablesorter.js
+(typeof window === 'undefined' ? global : window).__7cd6e2eeea92fd33dd52da951526a304 = (function () {
   var module = {
     exports: {}
   };
@@ -14758,8 +14934,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/tables-sortable.js
-(typeof window === 'undefined' ? global : window).__b4d73a0bb8c261fa890c4807671fd8d1 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/tables-sortable.js
+(typeof window === 'undefined' ? global : window).__7884db8256ff887adf7897ec0b66d820 = (function () {
   var module = {
     exports: {}
   };
@@ -14771,13 +14947,13 @@
       value: true
   });
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  __bcb3bf48343222097ceddcaac01ec182;
+  __7cd6e2eeea92fd33dd52da951526a304;
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
@@ -14891,8 +15067,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/tipsy.js
-(typeof window === 'undefined' ? global : window).__45a1cc98c2b204afcd7c4d672ec4ec09 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/tipsy.js
+(typeof window === 'undefined' ? global : window).__d14f0f297335aefa47f50a724842247b = (function () {
   var module = {
     exports: {}
   };
@@ -14900,12 +15076,12 @@
   
   'use strict';
   
-  __8c05d85e3d7fb791ad5071fea16ddb09;
+  __cc64a0d7c308ad5954e00f06c2bcc6ed;
   
   return module.exports;
 }).call(this);
-// src/js/aui/toggle.js
-(typeof window === 'undefined' ? global : window).__07a2f092bc69049991d58167c8791201 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/toggle.js
+(typeof window === 'undefined' ? global : window).__be71d4c22d5f8ec8e24cf5cbfc949106 = (function () {
   var module = {
     exports: {}
   };
@@ -14913,49 +15089,35 @@
   
   'use strict';
   
-  __7662207c0e706b4f9b15584a7f7253f9;
+  __e0a09f3ee5af5c6a891a000b0e664556;
   
-  __e8e9fc435c352b74c65e5f8d64ed692c;
+  __65bf2e9d62756879a7805c63dea11935;
   
-  var _attributes = __ab489eda548cad099ce93b60faa6a3d5;
+  var _attributes = __82e760f4580e37eda172e78ba0378f6d;
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _enforcer = __2512e2cfb8f46670d5cb777690a28c72;
+  var _enforcer = __da99b881b3bdaf63767de8d2780ca44c;
   
   var _enforcer2 = _interopRequireDefault(_enforcer);
   
-  var _keyCode = __e246bf93af36eb4453f35afeb1c302d9;
+  var _keyCode = __d92d89c196b4703777e79d25a9f94b7f;
   
   var _keyCode2 = _interopRequireDefault(_keyCode);
   
-  var _skatejsTemplateHtml = __c6b5725916d210b9653318d2ea2472cb;
+  var _skatejsTemplateHtml = __19c740e7a69d815ecec16b8dd69f0e00;
   
   var _skatejsTemplateHtml2 = _interopRequireDefault(_skatejsTemplateHtml);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
-  var _constants = __584af8690b0248d0ffcba682ccaa70ba;
-  
-  var _customEvent = __f7a5e0d2ea8865b104efc9b94861591e;
-  
-  var _customEvent2 = _interopRequireDefault(_customEvent);
-  
-  var _spinner = __6c1bd26c14066cf537a86a0966c2d4fc;
-  
-  var _spinner2 = _interopRequireDefault(_spinner);
+  var _constants = __b2cfc977d45980ce4c29f90ea86d5180;
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  function fireChangeEvent(element) {
-      if (element._canFireEventsNow) {
-          element.dispatchEvent(new _customEvent2.default('change', { bubbles: true }));
-      }
-  }
   
   function getInput(element) {
       return element._input || (element._input = element.querySelector('input'));
@@ -14996,12 +15158,12 @@
   
   var checkedAttributeHandler = {
       removed: function removed(element) {
+          removedAttributeHandler.call(this, 'checked', element);
           getInput(element).checked = false;
-          fireChangeEvent(element);
       },
-      fallback: function fallback(element) {
+      fallback: function fallback(element, change) {
+          fallbackAttributeHandler.call(this, 'checked', element, change);
           getInput(element).checked = true;
-          fireChangeEvent(element);
       }
   };
   
@@ -15016,9 +15178,8 @@
   
   function clickHandler(element, e) {
       if (!element.disabled && !element.busy && e.target !== element._input) {
-          element._input.checked = !element._input.checked;
+          element._input.click();
       }
-  
       (0, _attributes.setBooleanAttribute)(element, 'checked', getInput(element).checked);
   }
   
@@ -15053,16 +15214,11 @@
   }
   
   (0, _skate2.default)('aui-toggle', {
-      // "assistive" class avoids direct interaction with the <input> element
-      // (which prevents our click handler from being called),
-      // while allow the element to still participate in the form.
-      template: (0, _skatejsTemplateHtml2.default)('<input type="checkbox" class="aui-toggle-input assistive">', '<span class="aui-toggle-view">', '<span class="aui-toggle-tick aui-icon aui-icon-small aui-iconfont-success"></span>', '<span class="aui-toggle-cross aui-icon aui-icon-small aui-iconfont-close-dialog"></span>', '</span>'),
+      template: (0, _skatejsTemplateHtml2.default)('<input type="checkbox" class="aui-toggle-input">', '<span class="aui-toggle-view">', '<span class="aui-toggle-tick aui-icon aui-icon-small aui-iconfont-success"></span>', '<span class="aui-toggle-cross aui-icon aui-icon-small aui-iconfont-close-dialog"></span>', '</span>'),
       created: function created(element) {
           element._input = getInput(element); // avoid using _input in attribute handlers
           element._tick = element.querySelector('.aui-toggle-tick');
           element._cross = element.querySelector('.aui-toggle-cross');
-          element._spinner = new _spinner2.default();
-          element._spinner.setAttribute('size', _spinner.SIZE.SMALL.name);
   
           (0, _jquery2.default)(element._input).tooltip({
               title: function title() {
@@ -15072,10 +15228,6 @@
               hoverable: false
           });
           bindEventsToInput(element);
-          if (element.hasAttribute('checked')) {
-              getInput(element).setAttribute('checked', '');
-          }
-          element._canFireEventsNow = true;
       },
       attached: function attached(element) {
           (0, _enforcer2.default)(element).attributeExists('label');
@@ -15116,10 +15268,8 @@
               // Need to explicitly set the property on the checkbox because the
               // checkbox's property doesn't change with it's attribute after it
               // is clicked.
-              if (this._input.checked !== value) {
-                  this._input.checked = value;
-                  (0, _attributes.setBooleanAttribute)(this, 'checked', value);
-              }
+              this._input.checked = value;
+              return (0, _attributes.setBooleanAttribute)(this, 'checked', value);
           },
           get disabled() {
               return this._input.disabled;
@@ -15159,17 +15309,16 @@
                   this._input.indeterminate = true;
                   if (this.checked) {
                       (0, _jquery2.default)(this._input).addClass('indeterminate-checked');
-                      (0, _jquery2.default)(this._tick).append(this._spinner);
+                      (0, _jquery2.default)(this._tick).spin({ zIndex: null });
                   } else {
-                      (0, _jquery2.default)(this._cross).append(this._spinner);
+                      (0, _jquery2.default)(this._cross).spin({ zIndex: null, color: 'black' });
                   }
               } else {
                   (0, _jquery2.default)(this._input).removeClass('indeterminate-checked');
                   this._input.indeterminate = false;
                   this._input.removeAttribute('aria-busy');
-                  if (this._spinner.parentNode) {
-                      this._spinner.parentNode.removeChild(this._spinner);
-                  }
+                  (0, _jquery2.default)(this._cross).spinStop();
+                  (0, _jquery2.default)(this._tick).spinStop();
               }
               setDisabledForLabels(this, !!value);
               return value;
@@ -15179,8 +15328,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/trigger.js
-(typeof window === 'undefined' ? global : window).__30cf7e8f2431e5458a101ad849353fcd = (function () {
+// node_modules/@atlassian/aui/src/js/aui/trigger.js
+(typeof window === 'undefined' ? global : window).__ea2e55215adfd7d713f5dd9cd22093bf = (function () {
   var module = {
     exports: {}
   };
@@ -15188,15 +15337,15 @@
   
   'use strict';
   
-  var _jquery = __700a145ba3db9966cc95664c892049f8;
+  var _jquery = __02fa0d2334b5d2f9701871403ba9d89a;
   
   var _jquery2 = _interopRequireDefault(_jquery);
   
-  var _amdify = __65ca28a9d6b0f244027266ff8e6a6d1c;
+  var _amdify = __8f23956215d754ca94df621efa6b0438;
   
   var _amdify2 = _interopRequireDefault(_amdify);
   
-  var _skate = __0ac9a2c09f995a9c0a478af8742f59b7;
+  var _skate = __da172e72afc5a7088e3034df761062a6;
   
   var _skate2 = _interopRequireDefault(_skate);
   
@@ -15259,8 +15408,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui/truncating-progressive-data-set.js
-(typeof window === 'undefined' ? global : window).__b7e5361a4558fb1fdb441a3762d29b73 = (function () {
+// node_modules/@atlassian/aui/src/js/aui/truncating-progressive-data-set.js
+(typeof window === 'undefined' ? global : window).__2a380e6e7039c86b428d8010745343d0 = (function () {
   var module = {
     exports: {}
   };
@@ -15272,11 +15421,11 @@
       value: true
   });
   
-  var _globalize = __28c84e7bb75f6c3b0ba124d57bd69571;
+  var _globalize = __fb27ffae84b96c14bf339e62cefcf116;
   
   var _globalize2 = _interopRequireDefault(_globalize);
   
-  var _progressiveDataSet = __4f7eb6cf60845d0cd685bf4d782df3ea;
+  var _progressiveDataSet = __f1c85bac91549fc7b83aaa27ba2694e9;
   
   var _progressiveDataSet2 = _interopRequireDefault(_progressiveDataSet);
   
@@ -15345,8 +15494,8 @@
   
   return module.exports;
 }).call(this);
-// src/js/aui-experimental.js
-(typeof window === 'undefined' ? global : window).__9a7b184b39e064dd8841859a6fc08e10 = (function () {
+// node_modules/@atlassian/aui/src/js/aui-experimental.js
+(typeof window === 'undefined' ? global : window).__92bb2ab650fe75c101f95c7eb1533456 = (function () {
   var module = {
     exports: {}
   };
@@ -15358,59 +15507,81 @@
     value: true
   });
   
-  __cf0b3df2c677eb2f0864bd7dbf5cb857;
+  __c2529721e056b137d5dc332217e3a9a0;
   
-  __43174540fe92a0d9aeac77ff3a236665;
+  __86c5d8458771884814420d1e592e5434;
   
-  __eaacbdad8b92ceca9114dc3be870abe7;
+  __ba22a6a0f9889bb04a6764c4bc4865a0;
   
-  __44b5db0744691769a2b746c10f14a9a9;
+  __de170d5d90568334e1ab26d28697cb93;
   
-  __df7047d25e7ae0c2f22a17f939177597;
+  __abec049fae3e0e24b94d659c3600ba01;
   
-  __0477e1bf0caf4e570768f66b495137e7;
+  __bdcd8cba16e83e973cb8146ddb843c38;
   
-  __fdc0359427714432468af96b460aa252;
+  __b50249c6901293cd03d256e40a6d0941;
   
-  __276ead0c2b803a087db4ce7a0d05053e;
+  __2635f44381995ca51e130dad1479fffd;
   
-  __4686fdb214d2270ff96c190b2bd6bd2d;
+  __bb2eb5d964bbb49080eaffc7a1d17cbf;
   
-  __6e7c4718c7a654752224497662064b97;
+  __d3ebcf189654ce92803791fd3e76baad;
   
-  __4f7eb6cf60845d0cd685bf4d782df3ea;
+  __f1c85bac91549fc7b83aaa27ba2694e9;
   
-  __db4bee34c60bbc169d83f2674d47aa48;
+  __441c338a795b16645d3af32425aefa8e;
   
-  __9d6bbe6056be3ba99a06a04900676ca7;
+  __c5e3bf15f76fa7bfc2443017a9e6dfb3;
   
-  __b46ec20932fb7348b9b897055f211dc7;
+  __3253a94b3187c508715567de7b3d976c;
   
-  __93ae7363c623fd2012753bbaae65af05;
+  __c01675a5756b387d4597631183424a16;
   
-  __67239d8727b67748b2105d3faf199585;
+  __fa8e9894e9fa2d4a0a3f4a619cdac6dc;
   
-  __7dc2a1c33ff678de05f5aa1a9414d108;
+  __0d8267f32c62ec811936d03ae0ef7267;
   
-  __794d61e50f5e0ebf599ea9f132cd243e;
+  __35ff1875ff47a73afe1c7cfa63c3b7f7;
   
-  __6c1bd26c14066cf537a86a0966c2d4fc;
+  __e0a09f3ee5af5c6a891a000b0e664556;
   
-  __7662207c0e706b4f9b15584a7f7253f9;
+  __7884db8256ff887adf7897ec0b66d820;
   
-  __b4d73a0bb8c261fa890c4807671fd8d1;
+  __d14f0f297335aefa47f50a724842247b;
   
-  __45a1cc98c2b204afcd7c4d672ec4ec09;
+  __be71d4c22d5f8ec8e24cf5cbfc949106;
   
-  __07a2f092bc69049991d58167c8791201;
+  __65bf2e9d62756879a7805c63dea11935;
   
-  __e8e9fc435c352b74c65e5f8d64ed692c;
+  __ea2e55215adfd7d713f5dd9cd22093bf;
   
-  __30cf7e8f2431e5458a101ad849353fcd;
-  
-  __b7e5361a4558fb1fdb441a3762d29b73;
+  __2a380e6e7039c86b428d8010745343d0;
   
   exports.default = window.AJS;
+  module.exports = exports['default'];
+  
+  return module.exports;
+}).call(this);
+// src/js/aui-experimental.js
+(typeof window === 'undefined' ? global : window).__f60ffcf7fb94c84ef0707703add84c8f = (function () {
+  var module = {
+    exports: {}
+  };
+  var exports = module.exports;
+  
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _auiExperimental = __92bb2ab650fe75c101f95c7eb1533456;
+  
+  var _auiExperimental2 = _interopRequireDefault(_auiExperimental);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = _auiExperimental2.default;
   module.exports = exports['default'];
   
   return module.exports;
