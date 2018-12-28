@@ -9,11 +9,11 @@ type MultitendentController struct {
 	Ctx iris.Context
 }
 
-func (c *MultitendentController) Get() mvc.Result  {
+func (c *MultitendentController) Get() mvc.Result {
 	subdomain := c.Ctx.Subdomain()
 	print(subdomain)
 
-	return mvc.View {
+	return mvc.View{
 		Name: "index.view",
 	}
 }

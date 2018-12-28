@@ -7,6 +7,12 @@ type DefaultController struct {
 
 func (c *DefaultController) Get() mvc.Result {
 	return mvc.View{
-		Name: "index.view",
+		Name: "index.html",
+	}
+}
+
+func (c *DefaultController) GetOffline() mvc.Result {
+	return mvc.View{
+		Name: "cache.html",
 	}
 }

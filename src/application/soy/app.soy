@@ -50,7 +50,7 @@
      {@param? secondaryDescription: string}
 
 
-    <div class="col-4 card">
+    <div class="col-3 card">
         <div class="col-3">
             <img class="img-responsive" src="{$image}">
         </div>
@@ -95,7 +95,7 @@
  */
 {template .normalHeader}
     {call aui.page.header}
-        {param logo: 'jira' /}
+        {param logo: 'bitbucket' /}
         {param headerLink: '#' /}
     {/call}
 {/template}
@@ -107,9 +107,8 @@
 
     {@param? isLoggedIn: bool}
 
-
     {call aui.page.header}
-      {param logo: 'bamboo' /}
+      {param logo: 'bitbucket' /}
       {param headerLink: '#' /}
       {param primaryNavContent}
         <ul class="aui-nav">
@@ -130,7 +129,7 @@
              <li><a href="https://example.com/"
                     class="aui-button aui-button-primary">Sign In</a></li>
              <li><a href="https://example.com/"
-                    class="aui-button aui-button-primary">Register</a></li>
+                    class="aui-button">Register</a></li>
           {/if}
         </ul>
       {/param}

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="language" content="english">
+    <meta http-equiv="content-type" content="text/html">
+
+    <title>App</title>
+    <link rel="preload" href="/static/css/fonts/adgs-icons.woff" as="font">
+    <link rel="manifest" href="/static/manifest.json">
+
+    <link rel="stylesheet" href="/static/css/aui-prototyping.css"/>
+    <link rel="stylesheet" href="/static/css/simple-grid.css"/>
+    <link rel="stylesheet" href="/static/css/app.css"/>
+
+    <!--Meta Tags for HTML pages on Mobile-->
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="theme-color" content="#0747A6">
+
+</head>
+
+<body class="aui-page-focused aui-page-size-large">
+<div id="page">
+
+    <noscript>
+        <h1>Java script is Not Available</h1>
+    </noscript>
+    <header id="header" role="banner"></header>
+    <section id="content" role="main">
+        {{ yield }}
+    </section>
+</div>
+
+<script>
+    // Check that service workers are registered
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/static/js/sw.js');
+        });
+    }
+</script>
+
+<script src="/static/js/jq.js"></script>
+<script src="/static/js/soyutils.js"></script>
+<script src="/static/js/aui-prototyping.js"></script>
+<script src="/static/js/aui-soy.min.js"></script>
+<script src="/static/js/soy.js"></script>
+
+
+{{ part "scripts" }}
+
+</body>
+</html>
