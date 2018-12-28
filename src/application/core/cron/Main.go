@@ -7,6 +7,8 @@ import (
 
 func New() *gocron.Scheduler {
 	cron := gocron.NewScheduler()
+
+	// Add Tasks
 	cron.Every(5).Minutes().Do(task.Ping)
 	return cron
 }
