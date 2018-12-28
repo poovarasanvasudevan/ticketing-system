@@ -2,22 +2,15 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox
 
 if (workbox) {
 
-    var networkFirstHandler = workbox.strategies.networkFirst({
-        cacheName: 'default',
-        plugins: [
-            new workbox.expiration.Plugin({
-                maxEntries: 10
-            }),
-            new workbox.cacheableResponse.Plugin({
-                statuses: [200]
-            })
-        ]
-    });
-
-    const matcher = ({event}) => event.request.mode === 'navigate';
-    const handler = (args) => networkFirstHandler.handle(args).then((response) => (!response) ? caches.match('/offline') : response);
-
-    workbox.routing.registerRoute(matcher, handler);
+    var __precacheManifest = [
+        {
+            "url": "/"
+        },
+        {
+            "url": "/offline"
+        }
+    ];
+    workbox.precaching.precacheAndRoute(__precacheManifest, {});
 
 
     workbox.routing.registerRoute(
