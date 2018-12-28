@@ -13,6 +13,12 @@ import (
 )
 
 func commonMiddleware(c context.Context) {
+	c.ResponseWriter().Header().Add("X-Version", "0.1.0")
+	c.ResponseWriter().Header().Add("X-PoweredBy", "Mico")
+	c.ResponseWriter().Header().Add("X-Frame-Options", "sameorigin")
+	c.ResponseWriter().Header().Add("X-XSS-Protection", "1; mode=block")
+	c.ResponseWriter().Header().Add("X-Content-Type-Options", "nosniff")
+	c.ResponseWriter().Header().Add("Referrer-Policy", "no-referrer")
 
 	c.Next()
 }
@@ -20,8 +26,6 @@ func commonMiddleware(c context.Context) {
 func dynamicSubdomainHandler(ctx iris.Context) {
 	username := ctx.Subdomain()
 	_, _ = ctx.Writef("Hello from dynamic subdomain path: %s, here you can handle the route for dynamic subdomains, handle the user: %s", ctx.Path(), username)
-	// if http://username4.mydomain.com:8080/ prints:
-	// Hello from dynamic subdomain path: /, here you can handle the route for dynamic subdomains, handle the user: username4
 }
 
 func mainApplication() *iris.Application {

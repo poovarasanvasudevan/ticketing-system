@@ -29,9 +29,14 @@
                 image: "/static/image/cr.jpg",
                 heading: "Change Request",
                 description: "This is a sprint. Plan a sprint by dragging the sprint footer down below some issues, or by dragging issues here",
-
             });
-            $('#pattern').html(sr + pt + cr)
+
+            var um = com.poovarasan.application.boxPattern({
+                image: "/static/image/um.png",
+                heading: "User Management",
+                description: "This is a sprint. Plan a sprint by dragging the sprint footer down below some issues, or by dragging issues here",
+            });
+            $('#pattern').html(sr + pt + cr + um)
 
         })
     </script>
