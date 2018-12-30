@@ -16,3 +16,11 @@ func (c *DefaultController) GetOffline() mvc.Result {
 		Name: "cache.html",
 	}
 }
+
+
+func (c *DefaultController) GetHome() mvc.Result {
+	return mvc.View{
+		Name: "home.html",
+	}
+}
+

@@ -1,0 +1,9 @@
+[application]
+port = 9001
+maintenencemode = true
+viewpath = "/Users/user/Documents/GOPATH/src/application/views/"
+assetpath = "/Users/user/Documents/GOPATH/src/application/assets/"
+
+
+[cache]
+time = 600

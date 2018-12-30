@@ -1,17 +1,17 @@
+<header id="header" role="banner">
+    {{ render "partials/lheader.html"}}
+</header>
+<section id="content" role="main">
 <div>
     <div id="pattern" class="row"> </div>
 </div>
+</section>
 
 
 
 {{define "index-scripts"}}
     <script>
         $(function () {
-
-            $('#header').html(com.poovarasan.application.appHeader({
-                isLoggedIn: false
-            }));
-
             var sr = com.poovarasan.application.boxPattern({
                 image: "/static/image/sr.jpg",
                 heading: "Service Request",
@@ -36,7 +36,7 @@
                 heading: "User Management",
                 description: "This is a sprint. Plan a sprint by dragging the sprint footer down below some issues, or by dragging issues here",
             });
-            $('#pattern').html(sr + pt + cr + um)
+            $('#pattern').append(sr + pt + cr + um)
 
         })
     </script>

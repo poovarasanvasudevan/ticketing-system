@@ -24,16 +24,16 @@
 
 </head>
 
-<body class="aui-page-focused aui-page-size-large">
+<body class="aui-page-size-large">
 <div id="page">
 
     <noscript>
         <h1>Java script is Not Available</h1>
     </noscript>
-    <header id="header" role="banner"></header>
-    <section id="content" role="main">
-        {{ yield }}
-    </section>
+
+
+    {{ yield }}
+
 
 </div>
 
@@ -51,6 +51,7 @@
 <script src="/static/js/aui-prototyping.js"></script>
 <script src="/static/js/aui-soy.min.js"></script>
 <script src="/static/js/soy.js"></script>
+<script src="/static/js/utils.js"></script>
 
 
 {{ part "scripts" }}

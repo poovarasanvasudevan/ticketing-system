@@ -1,0 +1,52 @@
+<header id="header" role="banner">
+    {{ render "partials/emptyheader.html" }}
+</header>
+<section id="content" role="main" class="aui-page-notification aui-page-size-medium">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <h1>Down for maintenance</h1>
+                <div class="aui-page-notification-description">
+                    <p><strong>EAC is being upgraded</strong> and should be back online by 6:00pm Sydney time.</p>
+                </div>
+                <form action="#" method="post" id="d" class="aui top-label">
+                    <div class="field-group">
+                        <input class="text" type="text" id="d-email" aria-label="Email address" name="d-email" title="email" placeholder="Enter your email address">
+                        <input class="aui-button aui-button-primary" type="submit" id="submit" name="submit" value="Subscribe to updates">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div class="aui-page-notification-details">
+        <div class="aui-page-notification-details-header">
+            <strong>Last updated</strong> <time datetime="2013-11-28T11:52+1100">11:52 AEST, November 28 2013</time>
+        </div>
+
+        <div class="aui-page-notification-details-header">
+            <div class="aui-page-notification-details-header-expander">
+                <a id="more-details-trigger-1" data-replace-text="Hide detailed error message" class="aui-expander-trigger" aria-controls="more-details-content">Show detailed error message</a>
+            </div>
+        </div>
+
+        <div id="more-details-content" class="aui-page-notification-details-content aui-expander-content" aria-expanded="false" aria-hidden="true">
+            <h2>very issue</h2>
+            <h3>wow</h3>
+            <p>such problems</p>
+            <h3>much inform</h3>
+            <p>how fix?</p>
+            <h3>many stacktrace</h3>
+            <p>oh wow</p>
+        </div>
+    </div>
+
+</section>
+
+{{define "maintenence-scripts"}}
+    <script>
+        $(function () {
+            $('body').addClass('aui-page-notification');
+        })
+    </script>
+{{end}}

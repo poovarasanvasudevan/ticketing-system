@@ -1,2 +1,55 @@
-<h1>login</h1>
+<header id="header" role="banner">
+    {{ render "partials/emptyheader.html" }}
+</header>
+<section id="content" role="main" class="aui-page-notification aui-page-size-medium">
+    <div class="aui-page-panel unset-width">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <h1>Sign In</h1>
+                <div class="aui-page-notification-description">
 
+                </div>
+                <center>
+                    <div class="col-5 col-12-sm">
+                        <form action="#" method="post" id="d" class="aui top-label">
+                            <div class="field-group">
+
+                                <label for="d-email">Email / Username
+                                    <span class="aui-icon icon-required">(required)</span>
+                                </label>
+                                <input class="text full-width-field"
+                                       type="text"
+                                       required
+                                       id="d-email" aria-label="Email address"
+                                       name="d-email" title="email">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="d-password">Password
+                                    <span class="aui-icon icon-required">(required)</span></label>
+                                <input class="text full-width-field"
+                                       type="password"
+                                       required
+                                       id="d-password" aria-label="Password"
+                                       name="d-password" title="password">
+                            </div>
+
+                            <input class="aui-button aui-button-primary right" type="submit" id="submit" name="submit"
+                                   value="Sign in">
+
+                        </form>
+                    </div>
+                </center>
+            </section>
+        </div>
+    </div>
+
+</section>
+
+{{define "login-scripts"}}
+    <script>
+        $(function () {
+            $('body').addClass('aui-page-notification');
+        })
+    </script>
+{{end}}

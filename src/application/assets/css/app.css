@@ -24,3 +24,26 @@
 .offline {
     margin-top: 10%;
 }
+
+.right {
+    float: right;
+}
+
+.unset-max-width {
+    max-width: unset !important;
+}
+
+.app-toolbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+    background-color: white;
+    border-bottom: 1px solid #dadada;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .unset-width {
+        width: unset !important;
+    }
+}

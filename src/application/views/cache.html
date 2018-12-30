@@ -1,3 +1,7 @@
+<header id="header" role="banner">
+    {{ render "partials/emptyheader.html" }}
+</header>
+<section id="content" role="main">
 <div>
     <center>
         <div class="offline">
@@ -8,11 +12,12 @@
 
     </center>
 </div>
+</section>
 
 {{define "cache-scripts"}}
     <script>
         $(function () {
-            $('#header').html(com.poovarasan.application.normalHeader());
+
         })
     </script>
 {{end}}
