@@ -15,8 +15,8 @@ func GetConfigInstance() config.Config {
 		instance = config.NewConfig()
 		enc := toml.NewEncoder()
 
-		instance.Load(file.NewSource(
-			file.WithPath("/Users/user/Documents/GOPATH/src/application/config/app.toml"),
+		_ = instance.Load(file.NewSource(
+			file.WithPath("D:/GO/src/application/config/app.toml"),
 			source.WithEncoder(enc),
 		))
 	}

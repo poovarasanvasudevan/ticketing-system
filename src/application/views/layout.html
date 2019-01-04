@@ -24,7 +24,7 @@
 
 </head>
 
-<body class="aui-page-size-large">
+<body class="aui-page-size-large" ng-app="tapp" ng-controller="tcontroller">
 <div id="page">
 
     <noscript>
@@ -39,20 +39,25 @@
 
 <script>
     // Check that service workers are registered
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/static/js/sw.js');
-        });
-    }
+    if ('serviceWorker' in navigator) {window.addEventListener('load', function () { navigator.serviceWorker.register('/static/js/sw.js');});}
+    
+
 </script>
 
 <script src="/static/js/jq.js"></script>
+<script src="/static/js/angular.js"></script>
 <script src="/static/js/soyutils.js"></script>
 <script src="/static/js/aui-prototyping.js"></script>
 <script src="/static/js/aui-soy.min.js"></script>
 <script src="/static/js/soy.js"></script>
 <script src="/static/js/utils.js"></script>
+<script src="/static/js/base.js"></script>
 
+<script>
+    $(function () {
+
+    })
+</script>
 
 {{ part "scripts" }}
 

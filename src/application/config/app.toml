@@ -1,8 +1,8 @@
 [application]
 port = 9001
 maintenencemode = true
-viewpath = "/Users/user/Documents/GOPATH/src/application/views/"
-assetpath = "/Users/user/Documents/GOPATH/src/application/assets/"
+viewpath = "D:/GO/src/application/views/"
+assetpath = "D:/GO/src/application/assets/"
 
 
 [cache]

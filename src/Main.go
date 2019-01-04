@@ -24,24 +24,28 @@ func mainApplication() *iris.Application {
 	config := core.GetConfigInstance()
 
 	app := iris.New()
+
+	app.Any("/events", iris.FromStd(core.GetSSEInstance().HTTPHandler))
+
 	app.Use(recover2.New())
 	app.Use(logger.New())
 
 	app.UseGlobal(iris.Gzip)
 	app.UseGlobal(middleware.CommonMiddleware)
 	app.UseGlobal(middleware.SecurityMiddleware)
-	app.UseGlobal(iris.Cache304(10 * time.Second))
+	app.UseGlobal(iris.Cache304(30 * time.Second))
 
-	view := iris.HTML(config.Get("application","viewpath").String(""), ".html")
+	view := iris.HTML(config.Get("application", "viewpath").String(""), ".html")
 	view.Layout("layout.html")
 	view.Reload(true)
 	app.RegisterView(view)
 
-	app.StaticWeb("/static", config.Get("application","assetpath").String(""))
+	app.StaticWeb("/static", config.Get("application", "assetpath").String(""))
 
 	sess := sessions.New(sessions.Config{
 		Cookie: "application_session",
 	})
+
 
 	app.ConfigureHost(func(su *host.Supervisor) {
 		su.RegisterOnServe(func(taskHost host.TaskHost) {
@@ -54,8 +58,6 @@ func mainApplication() *iris.Application {
 		Register(sess).
 		Handle(new(controller.SystemController))
 
-
-
 	mvc.
 		New(app.Party("/")).
 		Register(sess).
@@ -65,9 +67,6 @@ func mainApplication() *iris.Application {
 		New(app.Party("/auth")).
 		Register(sess).
 		Handle(new(controller.LoginController))
-
-
-
 
 	return app
 }
@@ -80,7 +79,7 @@ func initCron() {
 func main() {
 	app := mainApplication()
 	_ = app.Run(
-		iris.Addr("application.local:9555"),
+		iris.Addr(":9555"),
 		// skip err server closed when CTRL/CMD+C pressed:
 		iris.WithoutServerError(iris.ErrServerClosed),
 		// enables faster json serialization and more:
