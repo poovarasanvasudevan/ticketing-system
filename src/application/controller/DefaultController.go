@@ -17,10 +17,14 @@ func (c *DefaultController) GetOffline() mvc.Result {
 	}
 }
 
+func (c *DefaultController) GetProfile() mvc.Result {
+	return mvc.View{
+		Name: "profile.html",
+	}
+}
 
 func (c *DefaultController) GetHome() mvc.Result {
 	return mvc.View{
 		Name: "home.html",
 	}
 }
-

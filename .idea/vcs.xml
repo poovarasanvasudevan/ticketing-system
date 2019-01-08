@@ -17,6 +17,8 @@
     <mapping directory="$PROJECT_DIR$/src/github.com/hashicorp/hcl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/imdario/mergo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/jasonlvhit/gocron" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/jinzhu/gorm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/jinzhu/inflection" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/jteeuwen/go-bindata" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/kataras/golog" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/kataras/iris" vcs="Git" />
@@ -30,6 +32,7 @@
     <mapping directory="$PROJECT_DIR$/src/github.com/ory/osin-storage" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/pborman/uuid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/r3labs/sse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/satori/go.uuid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/shuLhan/go-bindata" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/sirupsen/logrus" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/stretchr/testify" vcs="Git" />
@@ -42,6 +45,7 @@
     <mapping directory="$PROJECT_DIR$/src/github.com/tidwall/tinyqueue" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/twinj/uuid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/go.etcd.io/etcd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/golang.org/x/crypto" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/golang.org/x/net" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/golang.org/x/oauth2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/golang.org/x/sys" vcs="Git" />

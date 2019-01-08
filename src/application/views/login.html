@@ -11,35 +11,46 @@
                 </div>
                 <center>
                     <div class="col-5 col-12-sm">
-                        <form action="#" method="post" id="d" class="aui top-label">
+                        <form action="{{.authurl}}" method="post" id="d" class="aui top-label">
                             <div class="field-group">
-
                                 <label for="d-email">Email / Username
                                     <span class="aui-icon icon-required">(required)</span>
                                 </label>
                                 <input class="text full-width-field"
                                        type="text"
                                        required
-                                       id="d-email" aria-label="Email address"
-                                       name="d-email" title="email">
+                                       id="d-email"
+                                       aria-label="Email address"
+                                       name="d-email"
+                                       title="email">
                             </div>
 
                             <div class="field-group">
                                 <label for="d-password">Password
-                                    <span class="aui-icon icon-required">(required)</span></label>
+                                    <span class="aui-icon icon-required">(required)</span>
+                                </label>
                                 <input class="text full-width-field"
                                        type="password"
                                        required
-                                       id="d-password" aria-label="Password"
-                                       name="d-password" title="password">
+                                       id="d-password"
+                                       aria-label="Password"
+                                       name="d-password"
+                                       title="password">
                             </div>
 
-                            <input class="aui-button aui-button-primary right" type="submit" id="submit" name="submit"
-                                   value="Sign in">
-
+                            <div class="field-group">
+                                <input class="aui-button aui-button-primary right"
+                                       type="submit"
+                                       id="submit"
+                                       name="submit"
+                                       value="Sign in">
+                            </div>
                         </form>
                     </div>
                 </center>
+                <div style="padding:30px;margin-top: 30px;">
+                    <p><b>A privacy notice</b>(also sometimes referred to as a privacy policy) is a key document which you must have if you collect, use or process personal data of European Union citizens.</p>
+                </div>
             </section>
         </div>
     </div>

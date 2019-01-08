@@ -1,3 +1,18 @@
+html, body {
+    margin: 0;
+    height: 100%; /* can also use viewport units (height: 100vh) */
+}
+
+.c-container {
+    display: flex; /* displays flex-items (children) inline */
+    flex-direction: column; /* stacks them vertically */
+    height: 100%; /* needs to take the parents height, alternative: body {display: flex} */
+}
+.c-main {
+    flex: 1; /* takes the remaining height of the "container" div */
+    overflow: auto; /* to scroll just the "main" div */
+}
+
 .card {
     background: white;
     padding: 10px;
@@ -40,6 +55,33 @@
 
     background-color: white;
     border-bottom: 1px solid #dadada;
+}
+
+#content > .aui-tabs {
+    margin: unset;
+}
+
+.tabs-menu {
+    background-color: white;
+}
+
+.aui-tabs.vertical-tabs > .tabs-menu {
+    width: unset;
+}
+
+.aui-tabs.horizontal-tabs > .tabs-menu > .menu-item {
+    padding: 5px;
+}
+
+.aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:after {
+    bottom: -4px;
+    left: 2px;
+    right: 2px;
+}
+
+.aui-tabs.horizontal-tabs > .tabs-menu:after {
+    left: 0;
+    right: 0;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

@@ -5,6 +5,7 @@ import (
 	"application/core"
 	cron2 "application/core/cron"
 	"application/core/middleware"
+	"application/model"
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/core/host"
 	"github.com/kataras/iris/middleware/logger"
@@ -18,6 +19,10 @@ func dynamicSubdomainHandler(ctx iris.Context) {
 	username := ctx.Subdomain()
 	_, _ = ctx.Writef("Hello from dynamic subdomain path: %s, here you can handle the route for dynamic subdomains, handle the user: %s", ctx.Path(), username)
 }
+
+const (
+	app_host = "localhost:9555"
+)
 
 func mainApplication() *iris.Application {
 
@@ -45,7 +50,6 @@ func mainApplication() *iris.Application {
 	sess := sessions.New(sessions.Config{
 		Cookie: "application_session",
 	})
-
 
 	app.ConfigureHost(func(su *host.Supervisor) {
 		su.RegisterOnServe(func(taskHost host.TaskHost) {
@@ -78,6 +82,17 @@ func initCron() {
 
 func main() {
 	app := mainApplication()
+
+	username := "poosan"
+	user := model.User{
+		Username:  &username,
+		Password:  "poosan",
+		FirstName: "Poovarasan",
+		LastName:  "Vasudevan",
+	}
+
+	core.GetDatabaseInstance().Create(&user)
+
 	_ = app.Run(
 		iris.Addr(":9555"),
 		// skip err server closed when CTRL/CMD+C pressed:

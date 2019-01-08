@@ -2200,7 +2200,7 @@ abbr {
 }
 
 a {
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none
 }
 
@@ -2837,7 +2837,7 @@ a.aui-button:active, a.aui-button:focus, a.aui-button:hover {
     background-image: none;
     background-color: #deebff;
     border-color: transparent;
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none
 }
 
@@ -3029,7 +3029,7 @@ a.aui-button:active, a.aui-button:focus, a.aui-button:hover {
 }
 
 .aui-button:active .aui-icon {
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-button.active .aui-icon, .aui-button.aui-button-primary .aui-icon {
@@ -3037,7 +3037,7 @@ a.aui-button:active, a.aui-button:focus, a.aui-button:hover {
 }
 
 .aui-button.aui-button-link .aui-icon {
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-button.aui-button-link:hover .aui-icon {
@@ -3184,7 +3184,7 @@ aui-message {
 
 .aui-message {
     background: #fff;
-    border: 1px solid #0052cc;
+    border: 1px solid #3b5998;
     border-radius: 3px;
     color: #172b4d;
     line-height: 20px;
@@ -3218,7 +3218,7 @@ aui-message {
 
 .aui-message:after {
     content: "\F234";
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-message .aui-icon.icon-close {
@@ -3275,13 +3275,13 @@ aui-message {
 
 .aui-message-hint, .aui-message-info {
     background: #fff;
-    border-color: #0052cc;
+    border-color: #3b5998;
     color: #172b4d
 }
 
 .aui-message-hint:after, .aui-message-info:after {
     content: "\F234";
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-message-success {
@@ -3712,7 +3712,7 @@ form.aui .button.active, form.aui .button:active {
     background-image: none;
     background-color: #deebff;
     border-color: transparent;
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none
 }
 
@@ -4358,7 +4358,7 @@ form.aui pre.aui-form {
 
 .aui-dropdown2.aui-style-default:hover .aui-dropdown2-checkbox:not(.aui-dropdown2-disabled):active, .aui-dropdown2.aui-style-default:hover .aui-dropdown2-radio:not(.aui-dropdown2-disabled):active, .aui-dropdown2.aui-style-default:hover a:not(.aui-dropdown2-disabled):active {
     background-color: #deebff;
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-dropdown2.aui-style-default .active, .aui-dropdown2.aui-style-default .aui-dropdown2-active {
@@ -4870,7 +4870,7 @@ form.aui.long-label .field-group .ffi {
 .ffi:active:before, .ffi:active:hover:before {
     background-color: #deebff;
     background-image: none;
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none;
     text-shadow: none
 }
@@ -5707,7 +5707,7 @@ form.aui.long-label .field-group .ffi {
 }
 
 .aui-select2-container .select2-choices .select2-search-choice-focus {
-    border-color: transparent
+    border-color: transparent;
 }
 
 .aui-select2-container .select2-choice abbr {
@@ -5778,7 +5778,7 @@ form.aui.long-label .field-group .ffi {
 .aui-select2-container.select2-container .select2-choice:active, .aui-select2-container.select2-container.select2-container-active .select2-choice {
     background: #deebff;
     border-color: transparent;
-    color: #0052cc;
+    color: #3b5998;
     box-shadow: none;
     -webkit-filter: none;
     filter: none;
@@ -5787,7 +5787,7 @@ form.aui.long-label .field-group .ffi {
 }
 
 .aui-select2-container.select2-container .select2-choice:active:after, .aui-select2-container.select2-container.select2-container-active .select2-choice:after {
-    border-top-color: #0052cc
+    border-top-color: #3b5998
 }
 
 .aui-select2-container.select2-container.select2-dropdown-open:not(.select2-container-multi) .select2-choice, .aui-select2-container.select2-container.select2-dropdown-open:not(.select2-container-multi) .select2-choices {
@@ -5908,7 +5908,7 @@ form.aui.long-label .field-group .ffi {
 
 .aui-popover ul [role=option]:not(.aui-select-no-suggestions):active {
     background-color: #deebff;
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-popover ul:not(:hover) [role=option].aui-select-active {
@@ -6776,7 +6776,7 @@ aui-inline-dialog:before {
     background-image: none;
     background-color: #deebff;
     border-color: transparent;
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none
 }
 
@@ -6868,7 +6868,7 @@ aui-inline-dialog:before {
 }
 
 .aui-navgroup-horizontal .aui-nav > .aui-nav-selected a:after {
-    background: #0052cc;
+    background: #3b5998;
     bottom: 0;
     content: "";
     display: block;
@@ -6881,7 +6881,7 @@ aui-inline-dialog:before {
 }
 
 .aui-navgroup-horizontal .aui-nav > .aui-nav-selected a, .aui-navgroup-horizontal .aui-nav > .aui-nav-selected a.active, .aui-navgroup-horizontal .aui-nav > .aui-nav-selected a:link, .aui-navgroup-horizontal .aui-nav > .aui-nav-selected a:visited {
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-navgroup-horizontal .aui-dropdown2-trigger:after {
@@ -7202,7 +7202,7 @@ aui-tabs {
 }
 
 .aui-tabs > .tabs-menu .menu-item.active-tab a, .aui-tabs > .tabs-menu .menu-item.active-tab a:active, .aui-tabs > .tabs-menu .menu-item.active-tab a:focus, .aui-tabs > .tabs-menu .menu-item.active-tab a:hover, .aui-tabs > .tabs-menu .menu-item.active-tab a:link, .aui-tabs > .tabs-menu .menu-item.active-tab a:visited {
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-tabs.vertical-tabs {
@@ -7235,7 +7235,7 @@ aui-tabs {
 }
 
 .aui-tabs.vertical-tabs > .tabs-menu > .menu-item.active-tab a:after {
-    background: #0052cc;
+    background: #3b5998;
     bottom: 5px;
     content: "";
     display: block;
@@ -7295,7 +7295,7 @@ aui-tabs {
 }
 
 .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:after {
-    background: #0052cc;
+    background: #3b5998;
     bottom: 0;
     content: "";
     display: block;
@@ -7338,7 +7338,7 @@ aui-tabs {
 }
 
 .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a, .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:active, .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:focus, .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:hover, .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:link, .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.active-tab a:visited {
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-tabs.horizontal-tabs > .tabs-menu > .menu-item.hidden {
@@ -7542,7 +7542,7 @@ aui-tabs {
 
 .aui-badge.aui-badge-primary, aui-badge.aui-badge-primary {
     background-color: #b3d4ff;
-    color: #0052cc;
+    color: #3b5998;
     font-weight: 600
 }
 
@@ -7679,7 +7679,7 @@ aui-tabs {
 }
 
 .aui-label, a.aui-label {
-    color: #0052cc
+    color: #3b5998
 }
 
 span.aui-label {
@@ -7761,13 +7761,13 @@ span.aui-label {
 .aui-lozenge-current {
     background-color: #b3d4ff;
     border-color: #b3d4ff;
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-lozenge-current.aui-lozenge-subtle {
     background-color: #fff;
     border-color: #b3d4ff;
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-lozenge-complete, .aui-lozenge-new {
@@ -7879,7 +7879,7 @@ span.aui-label {
 }
 
 .aui-progress-tracker-step > a:hover {
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-progress-tracker-step > a:active {
@@ -7926,7 +7926,7 @@ span.aui-label {
 }
 
 .aui-tooltip.aui-form-notification-tooltip-info .tipsy-inner a {
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none
 }
 
@@ -8553,7 +8553,7 @@ aui-header {
 
 .aui-datepicker-dialog .ui-datepicker .ui-datepicker-calendar td a {
     background: #fff;
-    color: #0052cc;
+    color: #3b5998;
     text-decoration: none;
     text-align: center
 }
@@ -8567,13 +8567,13 @@ aui-header {
 }
 
 .aui-datepicker-dialog .ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day a {
-    background: #0052cc;
+    background: #3b5998;
     border-radius: 3px;
     color: #fff
 }
 
 .aui-datepicker-dialog .ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day a:hover {
-    background: #0052cc
+    background: #3b5998
 }
 
 .aui-datepicker-dialog .ui-datepicker .ui-datepicker-today {
@@ -8600,7 +8600,7 @@ aui-header {
 .aui-datepicker-dialog .ui-state-focus, .aui-datepicker-dialog .ui-state-hover, .aui-datepicker-dialog .ui-widget-content .ui-state-focus, .aui-datepicker-dialog .ui-widget-content .ui-state-hover, .aui-datepicker-dialog .ui-widget-header .ui-state-focus, .aui-datepicker-dialog .ui-widget-header .ui-state-hover {
     background: none;
     border: none;
-    color: #0052cc
+    color: #3b5998
 }
 
 .aui-datepicker-dialog .ui-datepicker .ui-datepicker-calendar td a:active, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-calendar td a:focus, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-calendar td a:hover, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .aui-datepicker-dialog .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover {
